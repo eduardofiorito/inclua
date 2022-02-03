@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Título</title>
         <Meta />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&family=Roboto:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
         <link

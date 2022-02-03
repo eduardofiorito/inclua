@@ -11,7 +11,7 @@ export const WrapperLogo = styled.div`
   .mobo {
     ${customMedia.greaterThan('large')`
       display: none;
-  `};
+    `};
   }
 `;
 
