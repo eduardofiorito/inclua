@@ -1,7 +1,11 @@
 import { ThemeProvider } from "styled-components"
 
 import GlobalStyle from 'styles/GlobalStyle'
-import darkTheme from 'styles/darkTheme'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import darkTheme from 'styles/darkTheme';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import theme from 'styles/theme';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,7 +19,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <Story />
       <GlobalStyle />
     </ThemeProvider>
