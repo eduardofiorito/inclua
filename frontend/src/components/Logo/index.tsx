@@ -52,7 +52,7 @@ const Logo = ({ alternativeText, width }: LogoProps) => {
         aria-label={alternativeText}
         className="mobo"
         width={
-          width === 'small'
+          width === 'normal'
             ? theme.logo.sizes.moboNormal
             : theme.logo.sizes.moboSmall
         }
