@@ -58,4 +58,12 @@ export default {
     xxlarge: '4rem',
     xxxlarge: '6rem',
   },
+  logo: {
+    sizes: {
+      small: '7.5rem',
+      normal: '9.4375rem',
+      moboSmall: '2.25rem',
+      moboNormal: '3rem',
+    },
+  },
 };
