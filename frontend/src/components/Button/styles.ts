@@ -1,7 +1,8 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import { AnchorProps } from '.';
+import { customMedia } from 'utils/generateMediaBreakpoint';
+import { ButtonProps } from '.';
 
-type SAnchorProps = Pick<AnchorProps, 'variation' | 'anchorDisplay'>;
+type SAnchorProps = Pick<ButtonProps, 'variation' | 'anchorDisplay'>;
 
 const modifiers = {
   primary: (theme: DefaultTheme) => css`
@@ -79,16 +80,25 @@ const modifiers = {
   `,
 };
 
-export const Anchor = styled.a<SAnchorProps>`
+export const Button = styled.button<SAnchorProps>`
   ${({ theme, variation, anchorDisplay }) => css`
     display: ${anchorDisplay};
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.button}rem;
+    font-weight: ${theme.font.weight.medium};
+    line-height: 1em;
+    letter-spacing: 0.15px;
     text-align: center;
     text-decoration: none;
     padding: 0.75rem 1rem;
-    font-weight: ${theme.font.weight.medium};
     border-radius: 0.25rem;
     cursor: pointer;
     transition: 0.5s;
+
+    ${customMedia.lessThan('small')`
+        font-size: ${theme.font.sizes.caption}rem;
+        width: 100%
+    `};
 
     ${!!variation && modifiers[variation](theme)}
   `}
