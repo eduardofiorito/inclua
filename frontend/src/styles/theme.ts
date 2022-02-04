@@ -19,7 +19,7 @@ export default {
     },
     sizes: {
       overline: 0.75,
-      caption: 875,
+      caption: 0.875,
       body2: 1,
       body1: 1.125,
       button: 1.125,
