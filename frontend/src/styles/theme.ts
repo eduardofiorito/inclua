@@ -38,7 +38,41 @@ export default {
     primary400: '#2D53A4',
     primary500: '#06266B',
     primary600: '#0A0F48',
-
+    button: {
+      primary: {
+        background: '#2D53A4',
+        color: '#fff',
+        hover: '#16377D',
+        focus: '#0C2967',
+        pressed: '#0C2967',
+        disable: {
+          color: 'rgba(255, 255, 255, 0.5)',
+          background: 'rgba(45, 83, 164, 0.5)',
+        },
+      },
+      secondary: {
+        background: '#fff',
+        color: '#2D53A4',
+        hover: '#2D53A4;',
+        focus: '#16377D',
+        pressed: '#0C2967',
+        disable: {
+          color: 'rgba(45, 83, 164, 0.5)',
+          background: 'rgba(255, 255, 255, 0.5)',
+        },
+      },
+      text: {
+        background: '#FDFDFD',
+        color: '#2D53A4',
+        hover: 'rgba(45, 83, 164, 0.1);',
+        focus: 'rgba(45, 83, 164, 0.1)',
+        pressed: 'rgba(45, 83, 164, 0.2);',
+        disable: {
+          color: 'rgba(45, 83, 164, 0.5)',
+          background: '#FDFDFD',
+        },
+      },
+    },
     title: '#050A3A',
     subtitle: '#5F6C81',
     text: '#41454C',
@@ -50,6 +84,7 @@ export default {
     footer: '#030629',
     header: '#fff',
     badge: '#5962C5',
+    strong: '#0a0f48',
   },
   spacings: {
     none: 0,
