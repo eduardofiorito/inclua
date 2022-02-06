@@ -1,19 +1,29 @@
 import styled, { css } from 'styled-components';
-import theme from 'styles/theme';
 import { customMedia } from 'utils/generateMediaBreakpoint';
 import { HeadingProps } from '.';
 
 export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
   as: `h${level}`,
 }))<HeadingProps>`
-  ${({ fontColor, size, weight, lineHeight, marginX, marginY }) => css`
+  ${({
+    size,
+    weight,
+    lineHeight,
+    marginTop,
+    marginRight,
+    marginBottom,
+    marginLeft,
+    theme,
+  }) => css`
     font-family: ${theme.font.familyTitle};
-    color: ${theme.colors[fontColor]};
+    color: ${theme.colors.title};
     font-size: ${theme.font.sizes[size]}rem;
     font-weight: ${theme.font.weight[weight]};
     line-height: ${lineHeight + 'em'};
-    margin: ${theme.spacings[marginY] + 'rem'}
-      ${theme.spacings[marginX] + 'rem'};
+    margin: ${theme.spacings[marginTop] + 'rem'}
+      ${theme.spacings[marginRight] + 'rem'}
+      ${theme.spacings[marginBottom] + 'rem'}
+      ${theme.spacings[marginLeft] + 'rem'};
     ${customMedia.lessThan('xxLarge')`
         font-size: ${theme.font.sizes[size] * 0.95}rem;
     `};

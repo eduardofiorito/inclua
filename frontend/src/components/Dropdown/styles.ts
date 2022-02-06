@@ -69,7 +69,7 @@ export const Link = styled.a<LinkProps>`
 export const Content = styled.div`
   ${({ theme }) => css`
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
     color: ${theme.colors.title};
     background: ${theme.colors.bg};

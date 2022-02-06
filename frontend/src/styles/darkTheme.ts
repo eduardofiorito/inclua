@@ -5,6 +5,7 @@ export default {
     lg: '62rem',
     xl: '75rem',
     xxl: '87.5rem',
+    max: '120rem',
   },
   gutter: '1.875rem',
   font: {
@@ -86,6 +87,7 @@ export default {
     badge: '#777ECF',
     strong: '#fff',
     overlay: 'rgba(255,255,255,0.05)',
+    shapes: '#0A0A0A',
   },
   spacings: {
     none: 0,

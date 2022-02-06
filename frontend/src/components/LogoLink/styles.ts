@@ -5,7 +5,7 @@ export const LogoLink = styled.a`
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
   &:hover {
     color: ${({ theme }) => theme.colors.primary300};
     transform: scale(0.99);

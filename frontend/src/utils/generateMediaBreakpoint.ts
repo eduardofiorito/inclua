@@ -10,6 +10,7 @@ const breakpointsInRem = pxToRem({
   large: '992px',
   xLarge: '1200px',
   xxLarge: '1400px',
+  max: '1921px',
 });
 
 export const customMedia = generateMedia(breakpointsInRem);

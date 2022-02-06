@@ -7,30 +7,34 @@ export type HeadingProps = {
   lineHeight?: number;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   fontColor?: keyof typeof theme.colors;
-  marginY?: keyof typeof theme.spacings;
-  marginX?: keyof typeof theme.spacings;
+  marginTop?: keyof typeof theme.spacings;
+  marginRight?: keyof typeof theme.spacings;
+  marginBottom?: keyof typeof theme.spacings;
+  marginLeft?: keyof typeof theme.spacings;
   children: string;
 };
 
 const Heading = ({
-  fontColor = 'title',
   level = 1,
   size = 'h1',
   weight = 'semiBold',
   lineHeight = 1,
-  marginY = 'none',
-  marginX = 'none',
+  marginTop = 'none',
+  marginRight = 'none',
+  marginBottom = 'none',
+  marginLeft = 'none',
   children,
 }: HeadingProps) => {
   return (
     <S.Heading
-      fontColor={fontColor}
       level={level}
       size={size}
       weight={weight}
       lineHeight={lineHeight}
-      marginY={marginY}
-      marginX={marginX}
+      marginTop={marginTop}
+      marginRight={marginRight}
+      marginBottom={marginBottom}
+      marginLeft={marginLeft}
     >
       {children}
     </S.Heading>
