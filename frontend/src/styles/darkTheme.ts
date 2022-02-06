@@ -85,6 +85,7 @@ export default {
     header: '#000',
     badge: '#777ECF',
     strong: '#fff',
+    overlay: 'rgba(255,255,255,0.05)',
   },
   spacings: {
     none: 0,
@@ -102,7 +103,14 @@ export default {
       small: '7.5rem',
       normal: '9.4375rem',
       moboSmall: '2.25rem',
-      moboNormal: '3rem',
+      moboNormal: '2.875rem',
     },
+  },
+  layers: {
+    base: 10,
+    menu: 20,
+    overlay: 30,
+    modal: 40,
+    alwaysOnTop: 50,
   },
 };

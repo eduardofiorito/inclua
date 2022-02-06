@@ -9,7 +9,7 @@ export default {
       type: 'string',
     },
     variation: 'primary',
-    anchorDisplay: 'inline-block',
+    buttonDisplay: 'inline-block',
   },
 } as ComponentMeta<typeof Button>;
 

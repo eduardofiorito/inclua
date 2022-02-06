@@ -7,18 +7,18 @@ type ButtonTypes =
 
 export type ButtonProps = {
   variation?: 'primary' | 'secondary' | 'text';
-  anchorDisplay?: 'inline-block' | 'block';
+  buttonDisplay?: 'inline-block' | 'block';
   as?: React.ElementType;
 } & ButtonTypes;
 
 const Button = ({
   children,
   variation = 'primary',
-  anchorDisplay = 'inline-block',
+  buttonDisplay = 'inline-block',
   ...props
 }: ButtonProps) => {
   return (
-    <S.Button variation={variation} anchorDisplay={anchorDisplay} {...props}>
+    <S.Button variation={variation} buttonDisplay={buttonDisplay} {...props}>
       {!!children && <>{children}</>}
     </S.Button>
   );
