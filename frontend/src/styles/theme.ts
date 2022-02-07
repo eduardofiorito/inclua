@@ -79,6 +79,8 @@ export default {
     text: '#41454C',
     bg: '#FDFDFD',
     cardBg: '#fff',
+    cardShadow:
+      '0px 6px 8px rgba(6, 38, 107, 0.08), 0px 1px 18px rgba(6, 38, 107, 0.04), 0px 3px 5px rgba(6, 38, 107, 0.01)',
     border: '#BBC6D9',
     link: '#3540B0',
     cta: '#122756',
@@ -88,6 +90,7 @@ export default {
     strong: '#0a0f48',
     overlay: 'rgba(0, 0, 0, 0.3)',
     shapes: '#EBF2FD',
+    tags: '#f5f5f5',
   },
   spacings: {
     none: 0,
