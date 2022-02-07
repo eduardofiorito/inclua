@@ -35,7 +35,13 @@ const GuideCard = ({
         >
           {type}
         </Heading>
-        <Heading level={4} size="h6" lineHeight={2} marginBottom="xsmall">
+        <Heading
+          level={4}
+          size="h6"
+          lineHeight={2}
+          marginBottom="xsmall"
+          fontColor="title"
+        >
           {title}
         </Heading>
         <S.ReadingTime>{readingTime}</S.ReadingTime>
