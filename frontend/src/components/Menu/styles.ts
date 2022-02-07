@@ -72,9 +72,7 @@ type MenuProps = {
 export const Mobile = styled.div<MenuProps>`
   ${({ isOpen, theme }) => css`
     display: ${isOpen ? 'flex' : 'none'};
-    opacity: ${isOpen ? 1 : 0};
     flex-direction: column;
-    justify-content: flex-start;
     background: ${theme.colors.bg};
     position: absolute;
     top: 0;
@@ -82,6 +80,11 @@ export const Mobile = styled.div<MenuProps>`
     left: 0;
     right: 0;
     height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    padding-bottom: 4rem;
   `}
   >
 `;
@@ -99,7 +102,8 @@ export const WrapperTop = styled.div`
   `}
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.button`
+  background: transparent;
   width: 2rem;
   cursor: pointer;
 

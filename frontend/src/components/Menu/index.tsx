@@ -77,7 +77,7 @@ const Menu = ({ authenticated = false }: MenuProps) => {
           )}
         </S.WrapperButton>
 
-        <S.IconWrapper onClick={() => setIsOpen(true)}>
+        <S.IconWrapper onClick={() => setIsOpen(true)} aria-label="Menu Mobile">
           <MenuIcon aria-label="Abrir menu" />
         </S.IconWrapper>
         <S.Mobile aria-hidden={!isOpen} isOpen={isOpen}>
