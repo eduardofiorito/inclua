@@ -11,10 +11,12 @@ export type HeadingProps = {
   marginRight?: keyof typeof theme.spacings;
   marginBottom?: keyof typeof theme.spacings;
   marginLeft?: keyof typeof theme.spacings;
+  textTransform?: 'uppercase' | 'lowercase' | 'capitalize' | 'none';
   children: string;
 };
 
 const Heading = ({
+  fontColor = 'title',
   level = 1,
   size = 'h1',
   weight = 'semiBold',
@@ -23,10 +25,12 @@ const Heading = ({
   marginRight = 'none',
   marginBottom = 'none',
   marginLeft = 'none',
+  textTransform = 'none',
   children,
 }: HeadingProps) => {
   return (
     <S.Heading
+      fontColor={fontColor}
       level={level}
       size={size}
       weight={weight}
@@ -35,6 +39,7 @@ const Heading = ({
       marginRight={marginRight}
       marginBottom={marginBottom}
       marginLeft={marginLeft}
+      textTransform={textTransform}
     >
       {children}
     </S.Heading>

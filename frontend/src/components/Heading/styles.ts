@@ -6,6 +6,7 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
   as: `h${level}`,
 }))<HeadingProps>`
   ${({
+    fontColor,
     size,
     weight,
     lineHeight,
@@ -13,13 +14,15 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
     marginRight,
     marginBottom,
     marginLeft,
+    textTransform,
     theme,
   }) => css`
     font-family: ${theme.font.familyTitle};
-    color: ${theme.colors.title};
+    color: ${theme.colors[fontColor]};
     font-size: ${theme.font.sizes[size]}rem;
     font-weight: ${theme.font.weight[weight]};
-    line-height: ${lineHeight + 'em'};
+    line-height: ${lineHeight + 'rem'};
+    text-transform: ${textTransform};
     margin: ${theme.spacings[marginTop] + 'rem'}
       ${theme.spacings[marginRight] + 'rem'}
       ${theme.spacings[marginBottom] + 'rem'}
