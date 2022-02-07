@@ -35,7 +35,13 @@ const CaseCard = ({
           >
             {type}
           </Heading>
-          <Heading level={4} size="h5" lineHeight={2} marginBottom="xsmall">
+          <Heading
+            level={4}
+            size="h5"
+            lineHeight={2}
+            marginBottom="xsmall"
+            fontColor="title"
+          >
             {title}
           </Heading>
           <S.Excerpt>{excerpt}</S.Excerpt>

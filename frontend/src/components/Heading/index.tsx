@@ -16,7 +16,7 @@ export type HeadingProps = {
 };
 
 const Heading = ({
-  fontColor = 'title',
+  fontColor,
   level = 1,
   size = 'h1',
   weight = 'semiBold',
