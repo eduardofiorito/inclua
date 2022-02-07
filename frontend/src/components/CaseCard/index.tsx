@@ -2,8 +2,10 @@ import Heading from 'components/Heading';
 import * as S from './styles';
 
 export type CaseCardProps = {
-  imgUrl: string;
-  alternativeText: string;
+  img: {
+    url: string;
+    alternativeText: string;
+  };
   type: string;
   title: string;
   excerpt: string;
@@ -12,8 +14,7 @@ export type CaseCardProps = {
 };
 
 const CaseCard = ({
-  imgUrl,
-  alternativeText,
+  img,
   type,
   title,
   excerpt,
@@ -23,7 +24,7 @@ const CaseCard = ({
   return (
     <S.CardLink href={linkUrl}>
       <S.Card>
-        <img src={imgUrl} alt={alternativeText} />
+        <img src={img.url} alt={img.alternativeText} />
         <S.Content>
           <Heading
             level={3}

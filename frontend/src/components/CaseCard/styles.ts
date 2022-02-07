@@ -14,6 +14,7 @@ export const Card = styled.article`
     background: ${theme.colors.cardBg};
     box-shadow: ${theme.colors.cardShadow};
     border-radius: 10px;
+    transition: transform ease-in 0.2s;
 
     &:hover {
       background: ${theme.colors.shapes};
