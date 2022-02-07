@@ -33,6 +33,7 @@ export default {
     },
   },
   colors: {
+    main: '#fff',
     primary100: '#EBF2FD',
     primary200: '#B2C7F3',
     primary300: '#6086D6',
