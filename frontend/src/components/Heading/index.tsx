@@ -6,7 +6,7 @@ export type HeadingProps = {
   weight?: keyof typeof theme.font.weight;
   lineHeight?: number;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  fontColor?: keyof typeof theme.colors;
+  fontColor: keyof typeof theme.colors;
   marginTop?: keyof typeof theme.spacings;
   marginRight?: keyof typeof theme.spacings;
   marginBottom?: keyof typeof theme.spacings;
