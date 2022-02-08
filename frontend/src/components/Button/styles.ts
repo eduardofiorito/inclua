@@ -55,7 +55,6 @@ const modifiers = {
   `,
 
   text: (theme: DefaultTheme) => css`
-    background: ${theme.colors.button.text.background};
     color: ${theme.colors.button.text.color};
     border-radius: 0;
 

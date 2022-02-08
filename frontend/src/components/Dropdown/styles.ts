@@ -25,7 +25,6 @@ export const Link = styled.a<LinkProps>`
     text-decoration: none;
     letter-spacing: 0.15px;
     justify-content: center;
-    background: ${theme.colors.bg};
 
     &:focus {
       color: ${theme.colors.title};
