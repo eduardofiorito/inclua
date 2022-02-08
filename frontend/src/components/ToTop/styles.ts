@@ -13,6 +13,7 @@ const modifiers = {
     justify-content: center;
     z-index: ${theme.layers.alwaysOnTop};
     background: ${theme.colors.primary400};
+    color: ${theme.colors.bg};
     cursor: pointer;
     animation: fadeIn 0.5s;
     transition: opacity 0.4s;
