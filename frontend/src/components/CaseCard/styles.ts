@@ -15,6 +15,8 @@ export const Card = styled.article`
     box-shadow: ${theme.colors.cardShadow};
     border-radius: 10px;
     transition: transform ease-in 0.2s;
+    min-height: 492px;
+    position: relative;
 
     &:hover {
       background: ${theme.colors.shapes};
@@ -23,9 +25,11 @@ export const Card = styled.article`
 
     img {
       max-width: 100%;
+      max-height: 207px;
       height: auto;
       border-radius: 8px 8px 0 0;
       display: block;
+      object-fit: cover;
     }
   `}
 `;
@@ -35,6 +39,10 @@ export const Content = styled.div`
 `;
 
 export const Excerpt = styled.p`
+  max-height: 4.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.small}rem;
     color: ${theme.colors.text};
@@ -49,6 +57,11 @@ export const Excerpt = styled.p`
       line-height: 1.5rem;
     `}
   `}
+`;
+
+export const TagsWrapper = styled.div`
+  position: absolute;
+  bottom: 1rem;
 `;
 
 export const Tags = styled.span`

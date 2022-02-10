@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1;
     font-family: ${({ theme }) => theme.font.family};
     background: ${({ theme }) => theme.colors.bg};
+    transition: background 0.2s ease-in, color 0.1s ease-in;
   }
   ol, ul {
     list-style: none;

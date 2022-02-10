@@ -19,7 +19,7 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
   }) => css`
     font-family: ${theme.font.familyTitle};
     color: ${theme.colors[fontColor]};
-    font-size: ${theme.font.sizes[size]}rem;
+    font-size: ${theme.font.sizes[size] + 'rem'};
     font-weight: ${theme.font.weight[weight]};
     line-height: ${lineHeight + 'rem'};
     text-transform: ${textTransform};

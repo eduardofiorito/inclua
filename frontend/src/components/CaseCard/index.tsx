@@ -6,10 +6,10 @@ export type CaseCardProps = {
     url: string;
     alternativeText: string;
   };
-  type: string;
+  type?: string;
   title: string;
   excerpt: string;
-  tags: string[];
+  tags?: string[];
   linkUrl: string;
 };
 
@@ -24,7 +24,13 @@ const CaseCard = ({
   return (
     <S.CardLink href={linkUrl}>
       <S.Card>
-        <img src={img.url} alt={img.alternativeText} />
+        <img
+          src={`http://localhost:1337${img.url}`}
+          alt={img.alternativeText}
+          width={368}
+          height={207}
+        />
+
         <S.Content>
           <Heading
             level={3}
@@ -45,9 +51,9 @@ const CaseCard = ({
             {title}
           </Heading>
           <S.Excerpt>{excerpt}</S.Excerpt>
-          {tags.map((tag, i) => (
-            <S.Tags key={i}>{tag}</S.Tags>
-          ))}
+          <S.TagsWrapper>
+            {tags ? tags.map((tag, i) => <S.Tags key={i}>{tag}</S.Tags>) : null}
+          </S.TagsWrapper>
         </S.Content>
       </S.Card>
     </S.CardLink>
