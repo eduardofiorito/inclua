@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_CASES_DESIGN = gql`
+export const QUERY_DESIGN_CASES = gql`
   query QueryCasesDesign($start: Int!, $limit: Int!, $type: String!) {
     cases(
       filters: { category: { name: { eq: $type } } }

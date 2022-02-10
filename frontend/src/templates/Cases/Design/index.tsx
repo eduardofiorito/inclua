@@ -2,11 +2,11 @@ import * as S from './styles';
 import { Container } from 'components/Container';
 import CaseCard from 'components/CaseCard';
 
-export type CaseDesignTemplateProps = {
-  casesDesign: ItemsDesignProps[];
+export type DesignCasesTemplateProps = {
+  designCases: DesignItemsProps[];
 };
 
-export type ItemsDesignProps = {
+export type DesignItemsProps = {
   imgCard: {
     url: string;
     alternativeText: string;
@@ -18,11 +18,11 @@ export type ItemsDesignProps = {
   tags: string[];
 };
 
-const CaseDesignTemplate = ({ casesDesign }: CaseDesignTemplateProps) => {
+const DesignCasesTemplate = ({ designCases }: DesignCasesTemplateProps) => {
   return (
     <Container>
       <S.Wrapper>
-        {casesDesign.map((caseDesign, index) => (
+        {designCases.map((caseDesign, index) => (
           <CaseCard
             key={index}
             img={caseDesign.imgCard}
@@ -36,4 +36,4 @@ const CaseDesignTemplate = ({ casesDesign }: CaseDesignTemplateProps) => {
     </Container>
   );
 };
-export default CaseDesignTemplate;
+export default DesignCasesTemplate;
