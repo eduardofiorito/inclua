@@ -90,7 +90,7 @@ export const Content = styled.div`
 
     ${customMedia.greaterThan('large')`
       position: absolute;
-      top: 78px;
+      top: 129px;
       left: 0;
     `}
   `}
@@ -104,7 +104,7 @@ export const Overlay = styled.div`
     ${customMedia.greaterThan('large')`
       position: fixed;
       display: block;
-      top: 78px;
+      top: 129px;
       bottom: 0px;
       right: 0px;
       left: 0px;
