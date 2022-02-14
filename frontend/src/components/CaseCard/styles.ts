@@ -31,6 +31,12 @@ export const Card = styled.article`
       display: block;
       object-fit: cover;
     }
+
+    h4 {
+      max-height: 6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   `}
 `;
 

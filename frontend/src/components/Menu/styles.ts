@@ -2,9 +2,12 @@ import styled, { css } from 'styled-components';
 import { customMedia } from 'utils/generateMediaBreakpoint';
 
 export const Menu = styled.menu`
-  padding: 1rem 0;
-  box-shadow: 0px 6px 8px rgba(6, 38, 107, 0.08),
-    0px 1px 18px rgba(6, 38, 107, 0.04), 0px 3px 5px rgba(6, 38, 107, 0.01);
+  ${({ theme }) => css`
+    background: ${theme.colors.bg};
+    padding: 1rem 0;
+    box-shadow: 0px 6px 8px rgba(6, 38, 107, 0.08),
+      0px 1px 18px rgba(6, 38, 107, 0.04), 0px 3px 5px rgba(6, 38, 107, 0.01);
+  `}
 
   .container {
     display: flex;
@@ -74,6 +77,7 @@ export const Mobile = styled.div<MenuProps>`
     display: ${isOpen ? 'flex' : 'none'};
     flex-direction: column;
     background: ${theme.colors.bg};
+    z-index: ${theme.layers.menu};
     position: absolute;
     top: 0;
     bottom: 0;

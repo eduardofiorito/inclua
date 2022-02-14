@@ -10,12 +10,12 @@ export const Footer = styled.footer`
   `}
 
   ${customMedia.between('small', 'large')`
-      padding: 5rem;
+      padding: 5rem 0;
       margin-top: 5rem;
   `}
 
   ${customMedia.greaterThan('large')`
-      padding: 6rem;
+      padding: 6rem 0;
       margin-top: 5rem;
   `}
 `;

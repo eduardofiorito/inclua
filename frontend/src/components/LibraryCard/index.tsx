@@ -16,10 +16,13 @@ export type LibraryCardProps = {
 
 const LibraryCard = ({ type, title, img, link }: LibraryCardProps) => {
   return (
-    <S.CardLink href={link.url}>
+    <S.CardLink href={link.url} target="_blank">
       <S.Card>
         <S.ImageWrapper>
-          <img src={img.url} alt={img.alternativeText} />
+          <img
+            src={`http://localhost:1337${img.url}`}
+            alt={img.alternativeText}
+          />
         </S.ImageWrapper>
 
         <S.Content>

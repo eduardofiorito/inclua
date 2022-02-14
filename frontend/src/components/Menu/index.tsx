@@ -43,7 +43,7 @@ const Menu = ({ authenticated = false }: MenuProps) => {
               </Dropdown>
             </S.ListItem>
             <S.ListItem>
-              <S.Link href="#">Sobre o Inclua</S.Link>
+              <S.Link href="#">Conheça o Inclua</S.Link>
             </S.ListItem>
             {!!authenticated && (
               <S.ListItem>

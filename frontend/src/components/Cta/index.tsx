@@ -8,7 +8,6 @@ export type CtaProps = {
     url: string;
     text: string;
   };
-
   color: 'light' | 'dark';
   typeImage: 'default' | 'designer' | 'dev' | 'tester';
 };

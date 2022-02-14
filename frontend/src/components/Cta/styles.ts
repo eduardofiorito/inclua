@@ -5,7 +5,7 @@ import { CtaProps } from '.';
 type SWrapperVariant = Pick<CtaProps, 'color'>;
 
 const modifiers = {
-  light: (theme: DefaultTheme) => css`
+  lightColor: (theme: DefaultTheme) => css`
     background: ${theme.colors.primary200};
     color: ${theme.colors.title};
   `,

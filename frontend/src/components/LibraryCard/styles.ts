@@ -11,6 +11,9 @@ export const Card = styled.article`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.border};
     max-width: 370px;
+    min-width: 370px;
+    min-height: 147px;
+    position: relative;
     background: ${theme.colors.cardBg};
     box-shadow: ${theme.colors.cardShadow};
     border-radius: 0.25rem;
@@ -23,6 +26,12 @@ export const Card = styled.article`
       transform: scale(1.005);
     }
   `}
+
+  h4 {
+    max-height: 4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const ImageWrapper = styled.picture`
@@ -33,15 +42,16 @@ export const ImageWrapper = styled.picture`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
 `;
 
 export const Link = styled.span`
   ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    align-self: flex-end;
     color: ${theme.colors.link};
     font-weight: ${theme.font.weight.semiBold};
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 
     ${customMedia.between('initial', 'medium')`
       font-size: ${theme.font.sizes.caption}rem;

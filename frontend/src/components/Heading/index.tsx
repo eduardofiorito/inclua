@@ -4,9 +4,9 @@ import * as S from './styles';
 export type HeadingProps = {
   size?: keyof typeof theme.font.sizes;
   weight?: keyof typeof theme.font.weight;
-  lineHeight?: number;
+  lineHeight?: 'normal' | number;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  fontColor: keyof typeof theme.colors;
+  fontColor?: keyof typeof theme.colors;
   marginTop?: keyof typeof theme.spacings;
   marginRight?: keyof typeof theme.spacings;
   marginBottom?: keyof typeof theme.spacings;
@@ -20,7 +20,7 @@ const Heading = ({
   level = 1,
   size = 'h1',
   weight = 'semiBold',
-  lineHeight = 1,
+  lineHeight = 'normal',
   marginTop = 'none',
   marginRight = 'none',
   marginBottom = 'none',

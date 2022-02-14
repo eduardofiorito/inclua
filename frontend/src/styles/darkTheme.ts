@@ -75,6 +75,11 @@ export default {
         },
       },
     },
+    support: {
+      yellow: '#EBB129',
+      red: '#DE515A',
+      purple: '#646DC8',
+    },
     title: 'rgba(235, 242, 253, .75)',
     subtitle: '#8A95A8',
     text: '#B2B5BD',

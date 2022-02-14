@@ -216,14 +216,12 @@ input JSONFilterInput {
 input ComponentAllCtaInput {
   id: ID
   title: String
-  img: ID
   btn: ComponentBtnBtnPrimaryInput
 }
 
 type ComponentAllCta {
   id: ID!
   title: String!
-  img: UploadFileEntityResponse!
   btn: ComponentBtnBtnPrimary
 }
 
@@ -239,61 +237,72 @@ type ComponentBtnBtnPrimary {
   url: String!
 }
 
-input ComponentHomeCaseCardFiltersInput {
-  badge: StringFilterInput
-  title: StringFilterInput
-  description: StringFilterInput
-  link: StringFilterInput
-  url: StringFilterInput
-  and: [ComponentHomeCaseCardFiltersInput]
-  or: [ComponentHomeCaseCardFiltersInput]
-  not: ComponentHomeCaseCardFiltersInput
-}
-
-input ComponentHomeCaseCardInput {
-  id: ID
-  badge: String
-  img: ID
-  title: String
-  description: String
-  link: String
-  url: String
-}
-
-type ComponentHomeCaseCard {
-  id: ID!
-  badge: String
-  img: UploadFileEntityResponse!
-  title: String!
-  description: String!
-  link: String!
-  url: String!
-}
-
 input ComponentHomeCasesSectionInput {
   id: ID
   title: String
+  cases: [ID]
 }
 
 type ComponentHomeCasesSection {
   id: ID!
   title: String!
+  cases(filters: CaseFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): CaseRelationResponseCollection
 }
 
 type ComponentHomeCtaSection {
   id: ID!
 }
 
+enum ENUM_COMPONENTHOMEGUIDECARD_TYPE {
+  all
+  design
+  dev
+}
+
+input ComponentHomeGuideCardFiltersInput {
+  badge: StringFilterInput
+  title: StringFilterInput
+  description: StringFilterInput
+  linkUrl: StringFilterInput
+  linkText: StringFilterInput
+  type: StringFilterInput
+  and: [ComponentHomeGuideCardFiltersInput]
+  or: [ComponentHomeGuideCardFiltersInput]
+  not: ComponentHomeGuideCardFiltersInput
+}
+
+input ComponentHomeGuideCardInput {
+  id: ID
+  badge: String
+  img: ID
+  title: String
+  description: String
+  linkUrl: String
+  linkText: String
+  type: ENUM_COMPONENTHOMEGUIDECARD_TYPE
+}
+
+type ComponentHomeGuideCard {
+  id: ID!
+  badge: String
+  img: UploadFileEntityResponse!
+  title: String!
+  description: String!
+  linkUrl: String!
+  linkText: String!
+  type: ENUM_COMPONENTHOMEGUIDECARD_TYPE!
+}
+
 input ComponentHomeGuidesSectionInput {
   id: ID
   title: String
-  caseCard: [ComponentHomeCaseCardInput]
+  guideCard: [ComponentHomeGuideCardInput]
 }
 
 type ComponentHomeGuidesSection {
   id: ID!
   title: String!
-  caseCard(filters: ComponentHomeCaseCardFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): [ComponentHomeCaseCard]!
+  guideCard(filters: ComponentHomeGuideCardFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): [ComponentHomeGuideCard]!
 }
 
 input ComponentHomeHeroSectionInput {
@@ -312,24 +321,18 @@ type ComponentHomeHeroSection {
   img: UploadFileEntityResponse!
 }
 
-input ComponentHomeLibrarySectionFiltersInput {
-  title: StringFilterInput
-  content_libraries: ContentLibraryFiltersInput
-  and: [ComponentHomeLibrarySectionFiltersInput]
-  or: [ComponentHomeLibrarySectionFiltersInput]
-  not: ComponentHomeLibrarySectionFiltersInput
-}
-
 input ComponentHomeLibrarySectionInput {
   id: ID
   title: String
   content_libraries: [ID]
+  btn: ComponentBtnBtnPrimaryInput
 }
 
 type ComponentHomeLibrarySection {
   id: ID!
   title: String!
   content_libraries(filters: ContentLibraryFiltersInput, pagination: PaginationArg = {}, sort: [String] = [], publicationState: PublicationState = LIVE): ContentLibraryRelationResponseCollection
+  btn: ComponentBtnBtnPrimary!
 }
 
 input ComponentHomeOpenGraphInput {
@@ -867,7 +870,7 @@ input HomePageInput {
   heroSection: ComponentHomeHeroSectionInput
   guidesSection: ComponentHomeGuidesSectionInput
   casesSection: ComponentHomeCasesSectionInput
-  librarySection: [ComponentHomeLibrarySectionInput]
+  librarySection: ComponentHomeLibrarySectionInput
   cta: ComponentAllCtaInput
   publishedAt: DateTime
 }
@@ -876,7 +879,7 @@ type HomePage {
   heroSection: ComponentHomeHeroSection!
   guidesSection: ComponentHomeGuidesSection
   casesSection: ComponentHomeCasesSection!
-  librarySection(filters: ComponentHomeLibrarySectionFiltersInput, pagination: PaginationArg = {}, sort: [String] = []): [ComponentHomeLibrarySection]!
+  librarySection: ComponentHomeLibrarySection!
   cta: ComponentAllCta
   createdAt: DateTime
   updatedAt: DateTime
@@ -991,7 +994,7 @@ type TagRelationResponseCollection {
   data: [TagEntity!]!
 }
 
-union GenericMorph = ComponentAllCta | ComponentBtnBtnPrimary | ComponentHomeCaseCard | ComponentHomeCasesSection | ComponentHomeCtaSection | ComponentHomeGuidesSection | ComponentHomeHeroSection | ComponentHomeLibrarySection | ComponentHomeOpenGraph | ComponentLibraryLink | ComponentOpenGraphImages | UploadFile | I18NLocale | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser | Author | Case | Category | ContentLibrary | HomePage | Seo | Tag
+union GenericMorph = ComponentAllCta | ComponentBtnBtnPrimary | ComponentHomeCasesSection | ComponentHomeCtaSection | ComponentHomeGuideCard | ComponentHomeGuidesSection | ComponentHomeHeroSection | ComponentHomeLibrarySection | ComponentHomeOpenGraph | ComponentLibraryLink | ComponentOpenGraphImages | UploadFile | I18NLocale | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser | Author | Case | Category | ContentLibrary | HomePage | Seo | Tag
 
 input FileInfoInput {
   name: String
