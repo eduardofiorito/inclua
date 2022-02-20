@@ -4,38 +4,26 @@ export const CasesFragment = gql`
   fragment CasesFragment on HomePage {
     casesSection {
       title
+      btn {
+        text
+        url
+      }
       cases {
-        data {
-          attributes {
-            imgCard {
-              data {
-                attributes {
-                  alternativeText
-                  url
-                  width
-                  height
-                }
-              }
-            }
-            category {
-              data {
-                attributes {
-                  name
-                }
-              }
-            }
-            title
-            excerpt
-            tags {
-              data {
-                attributes {
-                  name
-                }
-              }
-            }
-            slug
-          }
+        imgCard {
+          alternativeText
+          url
+          width
+          height
         }
+        category {
+          name
+        }
+        title
+        excerpt
+        tags {
+          name
+        }
+        slug
       }
     }
   }

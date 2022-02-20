@@ -5,19 +5,15 @@ export const HeroFragment = gql`
     heroSection {
       title
       subtitle
-      btnPrimary {
+      btn {
         text
         url
       }
       img {
-        data {
-          attributes {
-            alternativeText
-            url
-            width
-            height
-          }
-        }
+        alternativeText
+        url
+        width
+        height
       }
     }
   }

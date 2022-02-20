@@ -8,15 +8,11 @@ import { CtaFragment } from '../fragments/cta';
 export const QUERY_HOME = gql`
   query QueryHome {
     homePage {
-      data {
-        attributes {
-          ...HeroFragment
-          ...GuidesFragment
-          ...CasesFragment
-          ...LibraryFragment
-          ...CtaFragment
-        }
-      }
+      ...HeroFragment
+      ...GuidesFragment
+      ...CasesFragment
+      ...LibraryFragment
+      ...CtaFragment
     }
   }
 

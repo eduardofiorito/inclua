@@ -5,23 +5,17 @@ export const LibraryFragment = gql`
     librarySection {
       title
       content_libraries {
-        data {
-          attributes {
-            typeContent
-            title
-            img {
-              data {
-                attributes {
-                  alternativeText
-                  url
-                }
-              }
-            }
-            link {
-              text
-              url
-            }
-          }
+        content_type {
+          name
+        }
+        title
+        img {
+          alternativeText
+          url
+        }
+        link {
+          text
+          url
         }
       }
       btn {

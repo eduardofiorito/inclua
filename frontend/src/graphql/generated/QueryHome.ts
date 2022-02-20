@@ -3,19 +3,19 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { ENUM_COMPONENTHOMEGUIDECARD_TYPE, ENUM_CONTENTLIBRARY_TYPECONTENT } from "./globalTypes";
+import { ENUM_COMPONENTHOMEPAGEGUIDECARD_TYPE } from "./globalTypes";
 
 // ====================================================
 // GraphQL query operation: QueryHome
 // ====================================================
 
-export interface QueryHome_homePage_data_attributes_heroSection_btnPrimary {
-  __typename: "ComponentBtnBtnPrimary";
+export interface QueryHome_homePage_heroSection_btn {
+  __typename: "ComponentButtonBtn";
   text: string;
   url: string;
 }
 
-export interface QueryHome_homePage_data_attributes_heroSection_img_data_attributes {
+export interface QueryHome_homePage_heroSection_img {
   __typename: "UploadFile";
   alternativeText: string | null;
   url: string;
@@ -23,25 +23,15 @@ export interface QueryHome_homePage_data_attributes_heroSection_img_data_attribu
   height: number | null;
 }
 
-export interface QueryHome_homePage_data_attributes_heroSection_img_data {
-  __typename: "UploadFileEntity";
-  attributes: QueryHome_homePage_data_attributes_heroSection_img_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_heroSection_img {
-  __typename: "UploadFileEntityResponse";
-  data: QueryHome_homePage_data_attributes_heroSection_img_data | null;
-}
-
-export interface QueryHome_homePage_data_attributes_heroSection {
-  __typename: "ComponentHomeHeroSection";
+export interface QueryHome_homePage_heroSection {
+  __typename: "ComponentHomePageHeroSection";
   title: string;
   subtitle: string;
-  btnPrimary: QueryHome_homePage_data_attributes_heroSection_btnPrimary;
-  img: QueryHome_homePage_data_attributes_heroSection_img;
+  btn: QueryHome_homePage_heroSection_btn | null;
+  img: QueryHome_homePage_heroSection_img | null;
 }
 
-export interface QueryHome_homePage_data_attributes_guidesSection_guideCard_img_data_attributes {
+export interface QueryHome_homePage_guidesSection_guideCard_img {
   __typename: "UploadFile";
   alternativeText: string | null;
   url: string;
@@ -49,34 +39,30 @@ export interface QueryHome_homePage_data_attributes_guidesSection_guideCard_img_
   height: number | null;
 }
 
-export interface QueryHome_homePage_data_attributes_guidesSection_guideCard_img_data {
-  __typename: "UploadFileEntity";
-  attributes: QueryHome_homePage_data_attributes_guidesSection_guideCard_img_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_guidesSection_guideCard_img {
-  __typename: "UploadFileEntityResponse";
-  data: QueryHome_homePage_data_attributes_guidesSection_guideCard_img_data | null;
-}
-
-export interface QueryHome_homePage_data_attributes_guidesSection_guideCard {
-  __typename: "ComponentHomeGuideCard";
+export interface QueryHome_homePage_guidesSection_guideCard {
+  __typename: "ComponentHomePageGuideCard";
   badge: string | null;
-  img: QueryHome_homePage_data_attributes_guidesSection_guideCard_img;
-  type: ENUM_COMPONENTHOMEGUIDECARD_TYPE;
+  img: QueryHome_homePage_guidesSection_guideCard_img | null;
+  type: ENUM_COMPONENTHOMEPAGEGUIDECARD_TYPE;
   title: string;
   description: string;
   linkUrl: string;
   linkText: string;
 }
 
-export interface QueryHome_homePage_data_attributes_guidesSection {
-  __typename: "ComponentHomeGuidesSection";
-  title: string;
-  guideCard: (QueryHome_homePage_data_attributes_guidesSection_guideCard | null)[];
+export interface QueryHome_homePage_guidesSection {
+  __typename: "ComponentHomePageGuidesSection";
+  title: string | null;
+  guideCard: (QueryHome_homePage_guidesSection_guideCard | null)[] | null;
 }
 
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard_data_attributes {
+export interface QueryHome_homePage_casesSection_btn {
+  __typename: "ComponentButtonBtn";
+  text: string;
+  url: string;
+}
+
+export interface QueryHome_homePage_casesSection_cases_imgCard {
   __typename: "UploadFile";
   alternativeText: string | null;
   url: string;
@@ -84,154 +70,90 @@ export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attr
   height: number | null;
 }
 
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard_data {
-  __typename: "UploadFileEntity";
-  attributes: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard {
-  __typename: "UploadFileEntityResponse";
-  data: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard_data | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category_data_attributes {
+export interface QueryHome_homePage_casesSection_cases_category {
   __typename: "Category";
   name: string;
 }
 
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category_data {
-  __typename: "CategoryEntity";
-  attributes: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category {
-  __typename: "CategoryEntityResponse";
-  data: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category_data | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags_data_attributes {
+export interface QueryHome_homePage_casesSection_cases_tags {
   __typename: "Tag";
   name: string;
 }
 
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags_data {
-  __typename: "TagEntity";
-  attributes: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags {
-  __typename: "TagRelationResponseCollection";
-  data: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags_data[];
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data_attributes {
+export interface QueryHome_homePage_casesSection_cases {
   __typename: "Case";
-  imgCard: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_imgCard;
-  category: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_category | null;
+  imgCard: QueryHome_homePage_casesSection_cases_imgCard | null;
+  category: QueryHome_homePage_casesSection_cases_category | null;
   title: string;
   excerpt: string;
-  tags: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes_tags | null;
+  tags: QueryHome_homePage_casesSection_cases_tags[];
   slug: string;
 }
 
-export interface QueryHome_homePage_data_attributes_casesSection_cases_data {
-  __typename: "CaseEntity";
-  attributes: QueryHome_homePage_data_attributes_casesSection_cases_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection_cases {
-  __typename: "CaseRelationResponseCollection";
-  data: QueryHome_homePage_data_attributes_casesSection_cases_data[];
-}
-
-export interface QueryHome_homePage_data_attributes_casesSection {
-  __typename: "ComponentHomeCasesSection";
+export interface QueryHome_homePage_casesSection {
+  __typename: "ComponentHomePageCasesSection";
   title: string;
-  cases: QueryHome_homePage_data_attributes_casesSection_cases | null;
+  btn: QueryHome_homePage_casesSection_btn | null;
+  cases: QueryHome_homePage_casesSection_cases[];
 }
 
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img_data_attributes {
+export interface QueryHome_homePage_librarySection_content_libraries_content_type {
+  __typename: "ContentType";
+  name: string;
+}
+
+export interface QueryHome_homePage_librarySection_content_libraries_img {
   __typename: "UploadFile";
   alternativeText: string | null;
   url: string;
 }
 
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img_data {
-  __typename: "UploadFileEntity";
-  attributes: QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img {
-  __typename: "UploadFileEntityResponse";
-  data: QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img_data | null;
-}
-
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_link {
+export interface QueryHome_homePage_librarySection_content_libraries_link {
   __typename: "ComponentLibraryLink";
   text: string;
   url: string;
 }
 
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes {
+export interface QueryHome_homePage_librarySection_content_libraries {
   __typename: "ContentLibrary";
-  typeContent: ENUM_CONTENTLIBRARY_TYPECONTENT | null;
+  content_type: QueryHome_homePage_librarySection_content_libraries_content_type | null;
   title: string;
-  img: QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_img | null;
-  link: QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes_link | null;
+  img: QueryHome_homePage_librarySection_content_libraries_img | null;
+  link: QueryHome_homePage_librarySection_content_libraries_link | null;
 }
 
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries_data {
-  __typename: "ContentLibraryEntity";
-  attributes: QueryHome_homePage_data_attributes_librarySection_content_libraries_data_attributes | null;
-}
-
-export interface QueryHome_homePage_data_attributes_librarySection_content_libraries {
-  __typename: "ContentLibraryRelationResponseCollection";
-  data: QueryHome_homePage_data_attributes_librarySection_content_libraries_data[];
-}
-
-export interface QueryHome_homePage_data_attributes_librarySection_btn {
-  __typename: "ComponentBtnBtnPrimary";
+export interface QueryHome_homePage_librarySection_btn {
+  __typename: "ComponentButtonBtn";
   text: string;
   url: string;
 }
 
-export interface QueryHome_homePage_data_attributes_librarySection {
-  __typename: "ComponentHomeLibrarySection";
+export interface QueryHome_homePage_librarySection {
+  __typename: "ComponentHomePageLibrarySection";
   title: string;
-  content_libraries: QueryHome_homePage_data_attributes_librarySection_content_libraries | null;
-  btn: QueryHome_homePage_data_attributes_librarySection_btn;
+  content_libraries: QueryHome_homePage_librarySection_content_libraries[];
+  btn: QueryHome_homePage_librarySection_btn | null;
 }
 
-export interface QueryHome_homePage_data_attributes_cta_btn {
-  __typename: "ComponentBtnBtnPrimary";
+export interface QueryHome_homePage_cta_btn {
+  __typename: "ComponentButtonBtn";
   text: string;
   url: string;
 }
 
-export interface QueryHome_homePage_data_attributes_cta {
-  __typename: "ComponentAllCta";
+export interface QueryHome_homePage_cta {
+  __typename: "ComponentHomePageCta";
   title: string;
-  btn: QueryHome_homePage_data_attributes_cta_btn | null;
-}
-
-export interface QueryHome_homePage_data_attributes {
-  __typename: "HomePage";
-  heroSection: QueryHome_homePage_data_attributes_heroSection;
-  guidesSection: QueryHome_homePage_data_attributes_guidesSection | null;
-  casesSection: QueryHome_homePage_data_attributes_casesSection;
-  librarySection: QueryHome_homePage_data_attributes_librarySection;
-  cta: QueryHome_homePage_data_attributes_cta | null;
-}
-
-export interface QueryHome_homePage_data {
-  __typename: "HomePageEntity";
-  attributes: QueryHome_homePage_data_attributes | null;
+  btn: QueryHome_homePage_cta_btn | null;
 }
 
 export interface QueryHome_homePage {
-  __typename: "HomePageEntityResponse";
-  data: QueryHome_homePage_data | null;
+  __typename: "HomePage";
+  heroSection: QueryHome_homePage_heroSection | null;
+  guidesSection: QueryHome_homePage_guidesSection | null;
+  casesSection: QueryHome_homePage_casesSection | null;
+  librarySection: QueryHome_homePage_librarySection | null;
+  cta: QueryHome_homePage_cta | null;
 }
 
 export interface QueryHome {

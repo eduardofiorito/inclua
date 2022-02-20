@@ -1,41 +1,39 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_DESIGN_CASES = gql`
-  query QueryCasesDesign($start: Int!, $limit: Int!, $type: String!) {
-    cases(
-      filters: { category: { name: { eq: $type } } }
-      pagination: { start: $start, limit: $limit }
-    ) {
-      data {
-        attributes {
-          imgCard {
-            data {
-              attributes {
-                alternativeText
-                url
-                width
-                height
-              }
-            }
-          }
-          title
-          excerpt
-          slug
-
-          tags {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
-          category {
-            data {
-              attributes {
-                name
-              }
-            }
-          }
+export const QUERY_CASES = gql`
+  query QueryCases($start: Int, $limit: Int!, $sort: String, $where: JSON) {
+    cases(start: $start, limit: $limit, sort: $sort, where: $where) {
+      imgCard {
+        alternativeText
+        url
+      }
+      category {
+        name
+      }
+      subcategory {
+        name
+      }
+      title
+      excerpt
+      tags {
+        name
+      }
+      slug
+    }
+    casesConnection(where: $where) {
+      values {
+        id
+      }
+    }
+    casesSingle {
+      title
+      description
+      btnShowMore
+      empty {
+        text
+        img {
+          alternativeText
+          url
         }
       }
     }

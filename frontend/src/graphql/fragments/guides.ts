@@ -7,14 +7,10 @@ export const GuidesFragment = gql`
       guideCard {
         badge
         img {
-          data {
-            attributes {
-              alternativeText
-              url
-              width
-              height
-            }
-          }
+          alternativeText
+          url
+          width
+          height
         }
         type
         title

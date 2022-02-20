@@ -8,13 +8,13 @@
 // ====================================================
 
 export interface CtaFragment_cta_btn {
-  __typename: "ComponentBtnBtnPrimary";
+  __typename: "ComponentButtonBtn";
   text: string;
   url: string;
 }
 
 export interface CtaFragment_cta {
-  __typename: "ComponentAllCta";
+  __typename: "ComponentHomePageCta";
   title: string;
   btn: CtaFragment_cta_btn | null;
 }

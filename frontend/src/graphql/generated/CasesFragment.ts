@@ -7,7 +7,13 @@
 // GraphQL fragment: CasesFragment
 // ====================================================
 
-export interface CasesFragment_casesSection_cases_data_attributes_imgCard_data_attributes {
+export interface CasesFragment_casesSection_btn {
+  __typename: "ComponentButtonBtn";
+  text: string;
+  url: string;
+}
+
+export interface CasesFragment_casesSection_cases_imgCard {
   __typename: "UploadFile";
   alternativeText: string | null;
   url: string;
@@ -15,73 +21,34 @@ export interface CasesFragment_casesSection_cases_data_attributes_imgCard_data_a
   height: number | null;
 }
 
-export interface CasesFragment_casesSection_cases_data_attributes_imgCard_data {
-  __typename: "UploadFileEntity";
-  attributes: CasesFragment_casesSection_cases_data_attributes_imgCard_data_attributes | null;
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes_imgCard {
-  __typename: "UploadFileEntityResponse";
-  data: CasesFragment_casesSection_cases_data_attributes_imgCard_data | null;
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes_category_data_attributes {
+export interface CasesFragment_casesSection_cases_category {
   __typename: "Category";
   name: string;
 }
 
-export interface CasesFragment_casesSection_cases_data_attributes_category_data {
-  __typename: "CategoryEntity";
-  attributes: CasesFragment_casesSection_cases_data_attributes_category_data_attributes | null;
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes_category {
-  __typename: "CategoryEntityResponse";
-  data: CasesFragment_casesSection_cases_data_attributes_category_data | null;
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes_tags_data_attributes {
+export interface CasesFragment_casesSection_cases_tags {
   __typename: "Tag";
   name: string;
 }
 
-export interface CasesFragment_casesSection_cases_data_attributes_tags_data {
-  __typename: "TagEntity";
-  attributes: CasesFragment_casesSection_cases_data_attributes_tags_data_attributes | null;
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes_tags {
-  __typename: "TagRelationResponseCollection";
-  data: CasesFragment_casesSection_cases_data_attributes_tags_data[];
-}
-
-export interface CasesFragment_casesSection_cases_data_attributes {
+export interface CasesFragment_casesSection_cases {
   __typename: "Case";
-  imgCard: CasesFragment_casesSection_cases_data_attributes_imgCard;
-  category: CasesFragment_casesSection_cases_data_attributes_category | null;
+  imgCard: CasesFragment_casesSection_cases_imgCard | null;
+  category: CasesFragment_casesSection_cases_category | null;
   title: string;
   excerpt: string;
-  tags: CasesFragment_casesSection_cases_data_attributes_tags | null;
+  tags: CasesFragment_casesSection_cases_tags[];
   slug: string;
 }
 
-export interface CasesFragment_casesSection_cases_data {
-  __typename: "CaseEntity";
-  attributes: CasesFragment_casesSection_cases_data_attributes | null;
-}
-
-export interface CasesFragment_casesSection_cases {
-  __typename: "CaseRelationResponseCollection";
-  data: CasesFragment_casesSection_cases_data[];
-}
-
 export interface CasesFragment_casesSection {
-  __typename: "ComponentHomeCasesSection";
+  __typename: "ComponentHomePageCasesSection";
   title: string;
-  cases: CasesFragment_casesSection_cases | null;
+  btn: CasesFragment_casesSection_btn | null;
+  cases: CasesFragment_casesSection_cases[];
 }
 
 export interface CasesFragment {
   __typename: "HomePage";
-  casesSection: CasesFragment_casesSection;
+  casesSection: CasesFragment_casesSection | null;
 }
