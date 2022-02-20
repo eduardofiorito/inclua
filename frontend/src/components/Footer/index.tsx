@@ -24,9 +24,13 @@ const Footer = () => {
             >
               Aprender
             </Heading>
-            <S.Link href="/">Guias de Acessibilidade</S.Link>
-            <S.Link href="/">Estudos de Caso</S.Link>
-            <S.Link href="/">Bibliotecas de Links</S.Link>
+            <S.Link href="/guides?sort=created_at%3Adesc">
+              Guias de Acessibilidade
+            </S.Link>
+            <S.Link href="/cases?sort=created_at%3Adesc">
+              Estudos de Caso
+            </S.Link>
+            <S.Link href="/library">Bibliotecas de Links</S.Link>
           </S.Column>
           <S.Column>
             <Heading
@@ -265,7 +269,7 @@ const Footer = () => {
           </S.Languages>
 
           <S.Copyright>
-            <LogoLink alternativeText="Inclua Home" url="/" width="small" />{' '}
+            <LogoLink alternativeText="Inclua Home" url="/" width="small" />
             <span>&copy;</span>
           </S.Copyright>
 

@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 import { DefaultTheme } from 'styled-components';
 import { customMedia } from 'utils/generateMediaBreakpoint';
 
+import { Grid } from 'components/Grid';
+
 type BadgeProps = {
   visible: boolean;
 };
@@ -153,6 +155,10 @@ export const HeroShape = styled.div`
 export const Guides = styled.section`
   position: relative;
 
+  ${Grid} {
+    margin: 0;
+  }
+
   h2 {
     text-align: center;
   }
@@ -174,13 +180,7 @@ export const Guides = styled.section`
   `}
 `;
 
-export const GuidesWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-
+export const GuidesWrapper = styled(Grid)`
   ${customMedia.between('initial', 'medium')`
       padding-top: 2rem;
   `}
@@ -211,7 +211,6 @@ export const Guide = styled.article`
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 370px;
     padding: 1rem 1rem 2rem 1rem;
     box-shadow: ${theme.colors.cardShadow};
     transition: transform ease-in 0.2s;

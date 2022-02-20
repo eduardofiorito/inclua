@@ -6,7 +6,7 @@ const DropdownLearn = () => {
       <S.Column>
         <S.Title>Guias de acessibilidade</S.Title>
         <S.LinkWrapper>
-          <S.Link href="/">
+          <S.Link href="/guides?category=Para+todos&sort=created_at%3Adesc">
             O que todo profissional deve saber sobre acessibilidade e design
             inclusivo
             <svg
@@ -23,7 +23,7 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
-          <S.Link href="/">
+          <S.Link href="/guides?category=Design&sort=created_at%3Adesc">
             Boas práticas de inclusão e acessibilidade em UX, conteúdos e UI
             <svg
               width="18"
@@ -39,7 +39,7 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
-          <S.Link href="/">
+          <S.Link href="/guides?category=Desenvolvimento&sort=created_at%3Adesc">
             Boas práticas de acessibilidade e inclusão em códigos html e mobile
             <svg
               width="18"
@@ -56,12 +56,44 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
+          <S.All href="/guides?sort=created_at%3Adesc">
+            Ver todos os guias
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ marginLeft: '.5rem' }}
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.All>
         </S.LinkWrapper>
       </S.Column>
       <S.Column>
         <S.Title>Estudos de Caso</S.Title>
         <S.LinkWrapper>
-          <S.Link href="/">
+          <S.Link href="/cases?sort=created_at%3Adesc&category=Para+todos">
+            Cases para todos
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="arrow"
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.Link>
+          <S.Link href="/cases?sort=created_at%3Adesc&category=Design">
             Cases de Design
             <svg
               width="18"
@@ -77,7 +109,7 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
-          <S.Link href="/">
+          <S.Link href="/cases?sort=created_at%3Adesc&category=Desenvolvimento">
             Cases de Desenvolvimento
             <svg
               width="18"
@@ -93,13 +125,29 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
+          <S.All href="/cases?sort=created_at%3Adesc">
+            Ver todos os cases
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ marginLeft: '.5rem' }}
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.All>
         </S.LinkWrapper>
       </S.Column>
       <S.Column>
-        <S.Title>Estudos de Caso</S.Title>
+        <S.Title>Biblioteca de Links</S.Title>
         <S.LinkWrapper>
-          <S.Link href="/">
-            Ver todos os links
+          <S.Link href="/library?content_type=Artigos">
+            Artigos
             <svg
               width="18"
               height="18"
@@ -114,6 +162,70 @@ const DropdownLearn = () => {
               />
             </svg>
           </S.Link>
+          <S.Link href="/library?content_type=Cursos">
+            Cursos
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="arrow"
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.Link>
+          <S.Link href="/library?content_type=Livros">
+            Livros
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="arrow"
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.Link>
+          <S.Link href="/library?content_type=Videos">
+            Vídeos
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="arrow"
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.Link>
+          <S.All href="/library">
+            Ver todos os links
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ marginLeft: '.5rem' }}
+            >
+              <path
+                d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                fill="#646DC8"
+              />
+            </svg>
+          </S.All>
         </S.LinkWrapper>
       </S.Column>
     </S.Wrapper>

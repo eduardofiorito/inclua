@@ -44,7 +44,7 @@ export type LibraryCardProps = {
     url: string;
   };
   link: {
-    label: string;
+    text: string;
     url: string;
   };
 };
@@ -69,6 +69,10 @@ export type HomeProps = {
   cases: {
     title: string;
     cards: CasesCardProps[];
+    btn: {
+      text: string;
+      url: string;
+    };
   };
   library: {
     title: string;
@@ -110,7 +114,7 @@ const Home = ({ hero, guides, cases, library, cta }: HomeProps) => {
           </S.Content>
           <S.WrapperImage>
             <img
-              src={`http://localhost:1337${hero.img.url}`}
+              src={hero.img.url}
               alt={hero.img.alternativeText}
               draggable="false"
             />
@@ -143,10 +147,7 @@ const Home = ({ hero, guides, cases, library, cta }: HomeProps) => {
                   <S.BadgeWrapper visible={!!card.badge}>
                     <S.Badge>{card.badge}</S.Badge>
                   </S.BadgeWrapper>
-                  <img
-                    src={`http://localhost:1337${card.img.url}`}
-                    alt={card.img.alternativeText}
-                  />
+                  <img src={card.img.url} alt={card.img.alternativeText} />
                   <Heading
                     level={3}
                     size="caption"
@@ -221,6 +222,11 @@ const Home = ({ hero, guides, cases, library, cta }: HomeProps) => {
               />
             ))}
           </S.CasesWrapper>
+          <S.ButtonWrapper>
+            <Button variation="secondary" as="a" href={cases.btn.url}>
+              {cases.btn.text}
+            </Button>
+          </S.ButtonWrapper>
         </Container>
         <S.CaseShape>
           <svg

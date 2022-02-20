@@ -26,7 +26,7 @@ export async function getStaticProps() {
     casesSection: cases,
     librarySection: library,
     cta,
-  } = data.homePage.data.attributes;
+  } = data.homePage;
 
   return {
     props: {
@@ -34,14 +34,14 @@ export async function getStaticProps() {
       hero: {
         title: hero.title,
         subtitle: hero.subtitle,
-        btnPrimary: hero.btnPrimary,
-        img: hero.img.data.attributes,
+        btnPrimary: hero.btn,
+        img: hero.img,
       },
       guides: {
         title: guides.title,
         cards: guides.guideCard.map((card) => ({
           badge: card.badge,
-          img: card.img.data.attributes,
+          img: card.img,
           title: card.title,
           type: card.type,
           description: card.description,
@@ -51,34 +51,36 @@ export async function getStaticProps() {
       },
       cases: {
         title: cases.title,
-        cards: cases.cases.data.map((card) => ({
+        btn: {
+          url: cases.btn.url,
+          text: cases.btn.text,
+        },
+        cards: cases.cases.map((card) => ({
           img: {
-            alternativeText:
-              card.attributes.imgCard.data.attributes.alternativeText,
-            url: card.attributes.imgCard.data.attributes.url,
+            alternativeText: card.imgCard.alternativeText,
+            url: card.imgCard.url,
           },
           category: {
-            name: card.attributes.category.data.attributes.name,
+            name: card.category.name,
           },
-          title: card.attributes.title,
-          excerpt: card.attributes.excerpt,
-          tags: card.attributes.tags.data.map((tag) => tag.attributes.name),
-          slug: card.attributes.slug,
+          title: card.title,
+          excerpt: card.excerpt,
+          tags: card.tags.map((tag) => tag.name),
+          slug: card.slug,
         })),
       },
       library: {
         title: library.title,
-        content_libraries: library.content_libraries.data.map((card) => ({
-          typeContent: card.attributes.typeContent,
-          title: card.attributes.title,
+        content_libraries: library.content_libraries.map((card) => ({
+          typeContent: card.content_type.name,
+          title: card.title,
           img: {
-            alternativeText:
-              card.attributes.img.data.attributes.alternativeText,
-            url: card.attributes.img.data.attributes.url,
+            alternativeText: card.img.alternativeText,
+            url: card.img.url,
           },
           link: {
-            label: card.attributes.link.text,
-            url: card.attributes.link.url,
+            text: card.link.text,
+            url: card.link.url,
           },
         })),
         btn: library.btn,

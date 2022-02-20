@@ -74,6 +74,32 @@ export const Link = styled.a`
   `}
 `;
 
+export const All = styled.a`
+  ${({ theme }) => css`
+    color: ${theme.colors.link};
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    font-weight: ${theme.font.weight.semiBold};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    ${customMedia.between('initial', 'medium')`
+      font-size: ${theme.font.sizes.caption}rem;
+      padding: 1rem 0;
+      margin: .5rem 0;
+    `}
+
+    ${customMedia.greaterThan('medium')`
+      font-size: ${theme.font.sizes.body2}rem;
+      padding: 0.5rem 0.5rem 0.5rem 0;
+    `}
+  `}
+`;
+
 export const Row = styled.div`
   display: flex;
   flex: 1;
