@@ -9,7 +9,7 @@ export type LibraryCardProps = {
     alternativeText: string;
   };
   link: {
-    label: string;
+    text: string;
     url: string;
   };
 };
@@ -19,10 +19,7 @@ const LibraryCard = ({ type, title, img, link }: LibraryCardProps) => {
     <S.CardLink href={link.url} target="_blank">
       <S.Card>
         <S.ImageWrapper>
-          <img
-            src={`http://localhost:1337${img.url}`}
-            alt={img.alternativeText}
-          />
+          <img src={img.url} alt={img.alternativeText} />
         </S.ImageWrapper>
 
         <S.Content>
@@ -37,15 +34,15 @@ const LibraryCard = ({ type, title, img, link }: LibraryCardProps) => {
           </Heading>
           <Heading
             level={4}
-            size="h6"
-            lineHeight={2}
+            size="body1"
+            lineHeight={1.5}
             marginBottom="xsmall"
             fontColor="title"
           >
             {title}
           </Heading>
           <S.Link>
-            {link.label}
+            {link.text}
             <svg
               width="16"
               height="19"

@@ -10,8 +10,7 @@ export const CardLink = styled.a`
 export const Card = styled.article`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.border};
-    max-width: 370px;
-    min-width: 370px;
+    width: 100%;
     min-height: 147px;
     position: relative;
     background: ${theme.colors.cardBg};
@@ -28,7 +27,7 @@ export const Card = styled.article`
   `}
 
   h4 {
-    max-height: 4rem;
+    max-height: 4.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -37,6 +36,10 @@ export const Card = styled.article`
 export const ImageWrapper = styled.picture`
   display: flex;
   align-items: center;
+
+  img {
+    border-radius: 50%;
+  }
 `;
 
 export const Content = styled.div`
