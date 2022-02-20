@@ -10,20 +10,28 @@ export const CardLink = styled.a`
 export const Card = styled.article`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.border};
-    max-width: 270px;
     background: ${theme.colors.cardBg};
     box-shadow: ${theme.colors.cardShadow};
+    width: 100%;
     border-radius: 0.25rem;
     padding: 1rem;
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 0.75rem;
     transition: transform ease-in 0.2s;
+    min-height: 240px;
     &:hover {
       background: ${theme.colors.shapes};
       transform: scale(1.005);
     }
   `}
+
+  h4 {
+    max-height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const ImageWrapper = styled.picture`
@@ -40,6 +48,8 @@ export const ReadingTime = styled.span`
     display: flex;
     align-items: center;
     color: ${theme.colors.subtitle};
+    position: absolute;
+    bottom: 1rem;
 
     ${customMedia.between('initial', 'medium')`
       font-size: ${theme.font.sizes.overline}rem;

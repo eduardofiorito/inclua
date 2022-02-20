@@ -20,7 +20,7 @@ const GuideCard = ({
   readingTime,
 }: GuideCardProps) => {
   return (
-    <S.CardLink href={linkUrl}>
+    <S.CardLink href={linkUrl} title={title}>
       <S.Card>
         <S.ImageWrapper>
           <img src={img.url} alt={img.alternativeText} />
@@ -38,7 +38,7 @@ const GuideCard = ({
         <Heading
           level={4}
           size="h6"
-          lineHeight={2}
+          lineHeight={1.5}
           marginBottom="xsmall"
           fontColor="title"
         >
