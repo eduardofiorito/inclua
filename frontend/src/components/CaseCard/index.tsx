@@ -22,14 +22,9 @@ const CaseCard = ({
   linkUrl,
 }: CaseCardProps) => {
   return (
-    <S.CardLink href={linkUrl}>
+    <S.CardLink href={linkUrl} title={title}>
       <S.Card>
-        <img
-          src={`http://localhost:1337${img.url}`}
-          alt={img.alternativeText}
-          width={368}
-          height={207}
-        />
+        <img src={img.url} alt={img.alternativeText} />
 
         <S.Content>
           <Heading
@@ -43,8 +38,8 @@ const CaseCard = ({
           </Heading>
           <Heading
             level={4}
-            size="h5"
-            lineHeight={2}
+            size="h6"
+            lineHeight={1.5}
             marginBottom="xsmall"
             fontColor="title"
           >

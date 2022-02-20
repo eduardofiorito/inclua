@@ -10,12 +10,12 @@ export const CardLink = styled.a`
 export const Card = styled.article`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.border};
-    max-width: 370px;
     background: ${theme.colors.cardBg};
     box-shadow: ${theme.colors.cardShadow};
     border-radius: 10px;
     transition: transform ease-in 0.2s;
-    min-height: 492px;
+    min-height: 420px;
+    width: 100%;
     position: relative;
 
     &:hover {
@@ -24,8 +24,8 @@ export const Card = styled.article`
     }
 
     img {
-      max-width: 100%;
-      max-height: 207px;
+      width: 100%;
+      max-height: 150px;
       height: auto;
       border-radius: 8px 8px 0 0;
       display: block;
