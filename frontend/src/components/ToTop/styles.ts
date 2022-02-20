@@ -11,7 +11,7 @@ const modifiers = {
     align-items: center;
     border-radius: 50%;
     justify-content: center;
-    z-index: ${theme.layers.alwaysOnTop};
+    z-index: ${theme.layers.toTop};
     background: ${theme.colors.primary400};
     color: ${theme.colors.bg};
     cursor: pointer;

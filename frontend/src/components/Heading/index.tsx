@@ -20,7 +20,7 @@ const Heading = ({
   level = 1,
   size = 'h1',
   weight = 'semiBold',
-  lineHeight = 'normal',
+  lineHeight,
   marginTop = 'none',
   marginRight = 'none',
   marginBottom = 'none',

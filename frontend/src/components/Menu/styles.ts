@@ -90,7 +90,6 @@ export const Mobile = styled.div<MenuProps>`
     scroll-behavior: smooth;
     padding-bottom: 4rem;
   `}
-  >
 `;
 
 export const WrapperTop = styled.div`

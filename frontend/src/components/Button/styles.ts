@@ -23,7 +23,7 @@ const modifiers = {
 
     &:focus {
       background: ${theme.colors.button.primary.focus};
-      border: 1px solid ${theme.colors.strong};
+      border: 2px solid ${theme.colors.strong};
       box-shadow: 0px 4px 4px rgba(4, 67, 122, 0.1);
     }
   `,
@@ -49,7 +49,7 @@ const modifiers = {
     &:focus {
       background: ${theme.colors.button.secondary.focus};
       color: ${theme.colors.button.secondary.background};
-      border: 1px solid ${theme.colors.strong};
+      border: 2px solid ${theme.colors.strong};
       box-shadow: 0px 4px 4px rgba(4, 67, 122, 0.1);
     }
   `,
@@ -72,7 +72,7 @@ const modifiers = {
     &:focus {
       background: ${theme.colors.button.text.focus};
       color: ${theme.colors.button.text.color};
-      border: 1px solid ${theme.colors.strong};
+      border: 2px solid ${theme.colors.strong};
       border-radius: 0.25rem;
       box-shadow: 0px 4px 4px rgba(4, 67, 122, 0.2);
     }
