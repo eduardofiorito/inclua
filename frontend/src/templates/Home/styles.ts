@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { DefaultTheme } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 import { customMedia } from 'utils/generateMediaBreakpoint';
 
 import { Grid } from 'components/Grid';

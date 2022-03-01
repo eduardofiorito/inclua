@@ -13,6 +13,7 @@ export default {
       "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     familyTitle:
       "'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    familyCode: "'Source Code Pro', monospace",
     weight: {
       regular: 400,
       medium: 500,
@@ -129,4 +130,4 @@ export default {
     default: '0.3s ease-in-out',
     fast: '0.1s ease-in-out',
   },
-} as const;
+};

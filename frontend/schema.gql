@@ -79,6 +79,7 @@ type AccessibleTo {
   icon: UploadFile
   locale: String
   published_at: DateTime
+  guides(sort: String, limit: Int, start: Int, where: JSON): [Guides!]!
   localizations(sort: String, limit: Int, start: Int, where: JSON): [AccessibleTo!]!
 }
 
@@ -148,6 +149,7 @@ input AccessibleToInput {
   name: String!
   description: String!
   icon: ID
+  guides: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -159,6 +161,7 @@ input editAccessibleToInput {
   name: String
   description: String
   icon: ID
+  guides: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -359,6 +362,7 @@ type Case {
   locale: String
   published_at: DateTime
   tags(sort: String, limit: Int, start: Int, where: JSON): [Tag!]!
+  content_libraries(sort: String, limit: Int, start: Int, where: JSON): [ContentLibrary!]!
   localizations(sort: String, limit: Int, start: Int, where: JSON): [Case!]!
 }
 
@@ -478,6 +482,7 @@ input CaseInput {
   category: ID
   author: ID
   subcategory: ID
+  content_libraries: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -497,6 +502,7 @@ input editCaseInput {
   category: ID
   author: ID
   subcategory: ID
+  content_libraries: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -717,6 +723,7 @@ type ContentLibrary {
   published_at: DateTime
   categories(sort: String, limit: Int, start: Int, where: JSON): [Category!]!
   guides(sort: String, limit: Int, start: Int, where: JSON): [Guides!]!
+  cases(sort: String, limit: Int, start: Int, where: JSON): [Case!]!
   localizations(sort: String, limit: Int, start: Int, where: JSON): [ContentLibrary!]!
 }
 
@@ -802,6 +809,7 @@ input ContentLibraryInput {
   content_type: ID
   categories: [ID]
   guides: [ID]
+  cases: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -817,6 +825,7 @@ input editContentLibraryInput {
   content_type: ID
   categories: [ID]
   guides: [ID]
+  cases: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -1030,6 +1039,7 @@ type Guides {
   locale: String
   published_at: DateTime
   content_libraries(sort: String, limit: Int, start: Int, where: JSON): [ContentLibrary!]!
+  accessible_tos(sort: String, limit: Int, start: Int, where: JSON): [AccessibleTo!]!
   localizations(sort: String, limit: Int, start: Int, where: JSON): [Guides!]!
 }
 
@@ -1149,6 +1159,7 @@ input GuideInput {
   subcategory: ID
   content_libraries: [ID]
   icon: ID
+  accessible_tos: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime
@@ -1168,6 +1179,7 @@ input editGuideInput {
   subcategory: ID
   content_libraries: [ID]
   icon: ID
+  accessible_tos: [ID]
   localizations: [ID]
   locale: String
   published_at: DateTime

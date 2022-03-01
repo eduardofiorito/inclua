@@ -19,6 +19,7 @@ export async function getStaticProps() {
   const apolloClient = initializeApollo();
   const { data } = await apolloClient.query<QueryHome>({
     query: QUERY_HOME,
+    fetchPolicy: 'no-cache', //garantir sempre o dado mais atualizado na geração do estático
   });
   const {
     heroSection: hero,
@@ -29,8 +30,9 @@ export async function getStaticProps() {
   } = data.homePage;
 
   return {
+    //O estático é regerado a cada 1 hora
+    revalidate: 60 * 60,
     props: {
-      revalidate: 60 * 60,
       hero: {
         title: hero.title,
         subtitle: hero.subtitle,

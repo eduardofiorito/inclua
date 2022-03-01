@@ -12,7 +12,7 @@ export default {
       alternativeText: 'W3c',
     },
     link: {
-      label: 'W3C',
+      text: 'W3C',
       url: 'https://www.w3c.br/pub/Materiais/PublicacoesW3C/cartilha-w3cbr-acessibilidade-web-fasciculo-I.htmlq',
     },
   },

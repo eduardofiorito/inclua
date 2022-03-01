@@ -217,7 +217,7 @@ const Home = ({ hero, guides, cases, library, cta }: HomeProps) => {
                 type={card.category.name}
                 title={card.title}
                 excerpt={card.excerpt}
-                linkUrl={`cases/${card.category.name}/${card.slug}`}
+                linkUrl={`cases/${card.slug}`}
                 tags={card.tags}
               />
             ))}

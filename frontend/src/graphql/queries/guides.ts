@@ -40,3 +40,47 @@ export const QUERY_GUIDES = gql`
     }
   }
 `;
+
+export const QUERY_GUIDE_BY_SLUG = gql`
+  query QueryGuideBySlug($slug: String!) {
+    guides(where: { slug: $slug }) {
+      title
+      excerpt
+      slug
+      content
+      readingTime
+      audioDescription {
+        url
+      }
+      category {
+        name
+        slug
+      }
+      subcategory {
+        name
+      }
+      content_libraries(limit: 3) {
+        content_type {
+          name
+        }
+        title
+        img {
+          alternativeText
+          url
+        }
+        link {
+          text
+          url
+        }
+      }
+      accessible_tos {
+        name
+        description
+        icon {
+          alternativeText
+          url
+        }
+      }
+    }
+  }
+`;

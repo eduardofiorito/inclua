@@ -5,7 +5,7 @@ export default {
   title: 'CaseCard',
   component: CaseCard,
   args: {
-    url: '/cases',
+    linkUrl: '/cases',
     alternativeText: 'Alguma coisa',
     type: 'Cases de Design',
     title:

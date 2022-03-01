@@ -9,13 +9,13 @@ export type CtaProps = {
     text: string;
   };
   color: 'light' | 'dark';
-  typeImage: 'default' | 'designer' | 'dev' | 'tester';
+  typeImage: 'default' | 'design' | 'dev' | 'tester';
 };
 
 const Cta = ({ title, link, color, typeImage }: CtaProps) => {
   const image = {
     default: () => <img className="default" src="/images/default.svg" alt="" />,
-    designer: () => <img src="/images/designer.svg" alt="" />,
+    design: () => <img src="/images/designer.svg" alt="" />,
     dev: () => <img src="/images/dev.svg" alt="" />,
     tester: () => <img src="/images/tester.svg" alt="" />,
   };

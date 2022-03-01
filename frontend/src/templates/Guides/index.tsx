@@ -56,7 +56,7 @@ const LibraryTemplate = ({
     notifyOnNetworkStatusChange: true,
     variables: {
       start: 0,
-      limit: 6,
+      limit: 9,
       where: parseQueryStringToWhere({ queryString: query, filterItems }),
       sort: query.sort as string | null,
     },

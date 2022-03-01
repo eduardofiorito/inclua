@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
 import { customMedia } from 'utils/generateMediaBreakpoint';
 
 export const Wrapper = styled.main`
@@ -72,7 +71,7 @@ export const Description = styled.h2`
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    ${media.greaterThan('medium')`
+    ${customMedia.greaterThan('medium')`
       display: grid;
       grid-template-columns: 12rem 1fr;
       gap: ${theme.spacings.large}rem;

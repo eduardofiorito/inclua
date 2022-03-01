@@ -13,6 +13,7 @@ export default {
       "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     familyTitle:
       "'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    familyCode: "'Source Code Pro', monospace",
     weight: {
       regular: 400,
       medium: 500,
@@ -87,7 +88,7 @@ export default {
     cardBg: '#1f1f1f',
     cardShadow:
       '0px 6px 8px rgba(6, 38, 107, 0.08), 0px 1px 18px rgba(6, 38, 107, 0.04), 0px 3px 5px rgba(6, 38, 107, 0.01)',
-    border: '#1f1f1f',
+    border: '#333333',
     link: '#727AD5',
     cta: '#BCCCF1',
     footer: '#D9DCFC',
@@ -129,4 +130,4 @@ export default {
     default: '0.3s ease-in-out',
     fast: '0.1s ease-in-out',
   },
-} as const;
+};
