@@ -35,6 +35,7 @@ export default {
   },
   colors: {
     main: '#fff',
+    focus: '#000',
     primary100: '#EBF2FD',
     primary200: '#B2C7F3',
     primary300: '#6086D6',

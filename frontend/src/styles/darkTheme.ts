@@ -35,6 +35,7 @@ export default {
   },
   colors: {
     main: '#000',
+    focus: '#fff',
     primary100: '#0A0F48',
     primary200: '#06266B',
     primary300: '#2D53A4',
@@ -89,11 +90,11 @@ export default {
     cardShadow:
       '0px 6px 8px rgba(6, 38, 107, 0.08), 0px 1px 18px rgba(6, 38, 107, 0.04), 0px 3px 5px rgba(6, 38, 107, 0.01)',
     border: '#333333',
-    link: '#727AD5',
+    link: '#7C9BDE',
     cta: '#BCCCF1',
     footer: '#D9DCFC',
     header: '#000',
-    badge: '#777ECF',
+    badge: '#7C9BDE',
     strong: '#fff',
     overlay: 'rgba(255,255,255,0.05)',
     shapes: '#0A0A0A',

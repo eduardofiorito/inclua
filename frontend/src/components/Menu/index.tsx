@@ -11,6 +11,7 @@ import Button from 'components/Button';
 import Dropdown from 'components/Dropdown';
 import DropdownLearn from 'components/Dropdown/DropdownLearn';
 import DropdownEvaluate from 'components/Dropdown/DropdownEvaluate';
+import NavigationMenuComp from 'components/NavigationMenu';
 
 type MenuProps = {
   authenticated: boolean;
@@ -24,34 +25,7 @@ const Menu = ({ authenticated = false }: MenuProps) => {
       <Container className="container">
         <LogoLink url="/" alternativeText="Inclua Home" width="normal" />
 
-        <S.Nav>
-          <S.List>
-            <S.ListItem>
-              <Dropdown title={'Aprender'}>
-                <DropdownLearn />
-              </Dropdown>
-            </S.ListItem>
-            <S.ListItem>
-              <Dropdown title={'Avaliar'}>
-                <DropdownEvaluate />
-              </Dropdown>
-            </S.ListItem>
-            <S.ListItem>
-              <Dropdown title={'Colaborar'}>
-                <h1>Teste</h1>
-                <h2>Isso é outro teste</h2>
-              </Dropdown>
-            </S.ListItem>
-            <S.ListItem>
-              <S.Link href="#">Conheça o Inclua</S.Link>
-            </S.ListItem>
-            {!!authenticated && (
-              <S.ListItem>
-                <S.Link href="#">Painel</S.Link>
-              </S.ListItem>
-            )}
-          </S.List>
-        </S.Nav>
+        <NavigationMenuComp />
 
         <S.WrapperButton>
           {!authenticated && (

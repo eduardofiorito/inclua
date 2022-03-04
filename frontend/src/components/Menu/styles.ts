@@ -16,23 +16,6 @@ export const Menu = styled.menu`
   }
 `;
 
-export const Nav = styled.nav`
-  ${customMedia.between('initial', 'large')`
-      display: none;
-  `}
-
-  ${customMedia.greaterThan('large')`
-      display: flex;
-  `}
-`;
-
-export const List = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-`;
-export const ListItem = styled.li``;
-
 export const Link = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.primary400};
