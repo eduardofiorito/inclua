@@ -70,6 +70,55 @@ type UserPermissionsPasswordPayload {
   ok: Boolean!
 }
 
+type About {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String!
+  subtitle: String!
+  content: String!
+  cta: ComponentHomePageCta
+  locale: String
+  published_at: DateTime
+  localizations(sort: String, limit: Int, start: Int, where: JSON): [About!]!
+}
+
+input AboutInput {
+  title: String!
+  subtitle: String!
+  content: String!
+  cta: ComponentHomePageCtaInput!
+  localizations: [ID]
+  locale: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editAboutInput {
+  title: String
+  subtitle: String
+  content: String
+  cta: editComponentHomePageCtaInput
+  localizations: [ID]
+  locale: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateAboutInput {
+  data: editAboutInput
+}
+
+type updateAboutPayload {
+  about: About
+}
+
+type deleteAboutPayload {
+  about: About
+}
+
 type AccessibleTo {
   id: ID!
   created_at: DateTime!
@@ -2456,7 +2505,7 @@ input editComponentLibraryLinkInput {
   url: String
 }
 
-union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | AccessibleTo | AccessibleToConnection | AccessibleToAggregator | AccessibleToGroupBy | AccessibleToConnectionId | AccessibleToConnectionCreated_at | AccessibleToConnectionUpdated_at | AccessibleToConnectionName | AccessibleToConnectionDescription | AccessibleToConnectionIcon | AccessibleToConnectionLocale | AccessibleToConnectionPublished_at | createAccessibleToPayload | updateAccessibleToPayload | deleteAccessibleToPayload | Author | AuthorConnection | AuthorAggregator | AuthorGroupBy | AuthorConnectionId | AuthorConnectionCreated_at | AuthorConnectionUpdated_at | AuthorConnectionName | AuthorConnectionRole | AuthorConnectionEmail | AuthorConnectionPassword | AuthorConnectionSlug | AuthorConnectionAvatar | AuthorConnectionLocale | AuthorConnectionPublished_at | createAuthorPayload | updateAuthorPayload | deleteAuthorPayload | Case | CaseConnection | CaseAggregator | CaseGroupBy | CaseConnectionId | CaseConnectionCreated_at | CaseConnectionUpdated_at | CaseConnectionTitle | CaseConnectionExcerpt | CaseConnectionSlug | CaseConnectionContent | CaseConnectionImgCard | CaseConnectionReadingTime | CaseConnectionAudioDescription | CaseConnectionCategory | CaseConnectionAuthor | CaseConnectionSubcategory | CaseConnectionLocale | CaseConnectionPublished_at | createCasePayload | updateCasePayload | deleteCasePayload | CasesSingle | updateCasesSinglePayload | deleteCasesSinglePayload | Category | CategoryConnection | CategoryAggregator | CategoryGroupBy | CategoryConnectionId | CategoryConnectionCreated_at | CategoryConnectionUpdated_at | CategoryConnectionName | CategoryConnectionSlug | CategoryConnectionLocale | CategoryConnectionPublished_at | createCategoryPayload | updateCategoryPayload | deleteCategoryPayload | ChecklistSingle | updateChecklistSinglePayload | deleteChecklistSinglePayload | Checklist | ChecklistConnection | ChecklistAggregator | ChecklistGroupBy | ChecklistConnectionId | ChecklistConnectionCreated_at | ChecklistConnectionUpdated_at | ChecklistConnectionTitle | ChecklistConnectionDescription | ChecklistConnectionCategory | ChecklistConnectionTag | ChecklistConnectionLocale | ChecklistConnectionPublished_at | createChecklistPayload | updateChecklistPayload | deleteChecklistPayload | ContentLibrary | ContentLibraryConnection | ContentLibraryAggregator | ContentLibraryGroupBy | ContentLibraryConnectionId | ContentLibraryConnectionCreated_at | ContentLibraryConnectionUpdated_at | ContentLibraryConnectionTitle | ContentLibraryConnectionImg | ContentLibraryConnectionLink | ContentLibraryConnectionLanguage | ContentLibraryConnectionContent_type | ContentLibraryConnectionLocale | ContentLibraryConnectionPublished_at | createContentLibraryPayload | updateContentLibraryPayload | deleteContentLibraryPayload | ContentType | ContentTypeConnection | ContentTypeAggregator | ContentTypeGroupBy | ContentTypeConnectionId | ContentTypeConnectionCreated_at | ContentTypeConnectionUpdated_at | ContentTypeConnectionName | ContentTypeConnectionSlug | ContentTypeConnectionLocale | ContentTypeConnectionPublished_at | createContentTypePayload | updateContentTypePayload | deleteContentTypePayload | GuidesSingle | updateGuidesSinglePayload | deleteGuidesSinglePayload | Guides | GuidesConnection | GuidesAggregator | GuidesGroupBy | GuidesConnectionId | GuidesConnectionCreated_at | GuidesConnectionUpdated_at | GuidesConnectionTitle | GuidesConnectionExcerpt | GuidesConnectionSlug | GuidesConnectionContent | GuidesConnectionReadingTime | GuidesConnectionAudioDescription | GuidesConnectionTag | GuidesConnectionCategory | GuidesConnectionSubcategory | GuidesConnectionIcon | GuidesConnectionLocale | GuidesConnectionPublished_at | createGuidePayload | updateGuidePayload | deleteGuidePayload | HomePage | updateHomePagePayload | deleteHomePagePayload | Library | updateLibraryPayload | deleteLibraryPayload | NotFound | updateNotFoundPayload | deleteNotFoundPayload | Subcategoria | SubcategoriaConnection | SubcategoriaAggregator | SubcategoriaGroupBy | SubcategoriaConnectionId | SubcategoriaConnectionCreated_at | SubcategoriaConnectionUpdated_at | SubcategoriaConnectionName | SubcategoriaConnectionSlug | SubcategoriaConnectionLocale | SubcategoriaConnectionPublished_at | createSubcategoriaPayload | updateSubcategoriaPayload | deleteSubcategoriaPayload | Tag | TagConnection | TagAggregator | TagGroupBy | TagConnectionId | TagConnectionCreated_at | TagConnectionUpdated_at | TagConnectionName | TagConnectionSlug | TagConnectionLocale | TagConnectionPublished_at | createTagPayload | updateTagPayload | deleteTagPayload | I18NLocale | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentButtonBtn | ComponentChecklistAccordion | ComponentHomePageCasesSection | ComponentHomePageCta | ComponentHomePageGuideCard | ComponentHomePageGuidesSection | ComponentHomePageHeroSection | ComponentHomePageLibrarySection | ComponentLibraryEmpty | ComponentLibraryLink
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | About | updateAboutPayload | deleteAboutPayload | AccessibleTo | AccessibleToConnection | AccessibleToAggregator | AccessibleToGroupBy | AccessibleToConnectionId | AccessibleToConnectionCreated_at | AccessibleToConnectionUpdated_at | AccessibleToConnectionName | AccessibleToConnectionDescription | AccessibleToConnectionIcon | AccessibleToConnectionLocale | AccessibleToConnectionPublished_at | createAccessibleToPayload | updateAccessibleToPayload | deleteAccessibleToPayload | Author | AuthorConnection | AuthorAggregator | AuthorGroupBy | AuthorConnectionId | AuthorConnectionCreated_at | AuthorConnectionUpdated_at | AuthorConnectionName | AuthorConnectionRole | AuthorConnectionEmail | AuthorConnectionPassword | AuthorConnectionSlug | AuthorConnectionAvatar | AuthorConnectionLocale | AuthorConnectionPublished_at | createAuthorPayload | updateAuthorPayload | deleteAuthorPayload | Case | CaseConnection | CaseAggregator | CaseGroupBy | CaseConnectionId | CaseConnectionCreated_at | CaseConnectionUpdated_at | CaseConnectionTitle | CaseConnectionExcerpt | CaseConnectionSlug | CaseConnectionContent | CaseConnectionImgCard | CaseConnectionReadingTime | CaseConnectionAudioDescription | CaseConnectionCategory | CaseConnectionAuthor | CaseConnectionSubcategory | CaseConnectionLocale | CaseConnectionPublished_at | createCasePayload | updateCasePayload | deleteCasePayload | CasesSingle | updateCasesSinglePayload | deleteCasesSinglePayload | Category | CategoryConnection | CategoryAggregator | CategoryGroupBy | CategoryConnectionId | CategoryConnectionCreated_at | CategoryConnectionUpdated_at | CategoryConnectionName | CategoryConnectionSlug | CategoryConnectionLocale | CategoryConnectionPublished_at | createCategoryPayload | updateCategoryPayload | deleteCategoryPayload | ChecklistSingle | updateChecklistSinglePayload | deleteChecklistSinglePayload | Checklist | ChecklistConnection | ChecklistAggregator | ChecklistGroupBy | ChecklistConnectionId | ChecklistConnectionCreated_at | ChecklistConnectionUpdated_at | ChecklistConnectionTitle | ChecklistConnectionDescription | ChecklistConnectionCategory | ChecklistConnectionTag | ChecklistConnectionLocale | ChecklistConnectionPublished_at | createChecklistPayload | updateChecklistPayload | deleteChecklistPayload | ContentLibrary | ContentLibraryConnection | ContentLibraryAggregator | ContentLibraryGroupBy | ContentLibraryConnectionId | ContentLibraryConnectionCreated_at | ContentLibraryConnectionUpdated_at | ContentLibraryConnectionTitle | ContentLibraryConnectionImg | ContentLibraryConnectionLink | ContentLibraryConnectionLanguage | ContentLibraryConnectionContent_type | ContentLibraryConnectionLocale | ContentLibraryConnectionPublished_at | createContentLibraryPayload | updateContentLibraryPayload | deleteContentLibraryPayload | ContentType | ContentTypeConnection | ContentTypeAggregator | ContentTypeGroupBy | ContentTypeConnectionId | ContentTypeConnectionCreated_at | ContentTypeConnectionUpdated_at | ContentTypeConnectionName | ContentTypeConnectionSlug | ContentTypeConnectionLocale | ContentTypeConnectionPublished_at | createContentTypePayload | updateContentTypePayload | deleteContentTypePayload | GuidesSingle | updateGuidesSinglePayload | deleteGuidesSinglePayload | Guides | GuidesConnection | GuidesAggregator | GuidesGroupBy | GuidesConnectionId | GuidesConnectionCreated_at | GuidesConnectionUpdated_at | GuidesConnectionTitle | GuidesConnectionExcerpt | GuidesConnectionSlug | GuidesConnectionContent | GuidesConnectionReadingTime | GuidesConnectionAudioDescription | GuidesConnectionTag | GuidesConnectionCategory | GuidesConnectionSubcategory | GuidesConnectionIcon | GuidesConnectionLocale | GuidesConnectionPublished_at | createGuidePayload | updateGuidePayload | deleteGuidePayload | HomePage | updateHomePagePayload | deleteHomePagePayload | Library | updateLibraryPayload | deleteLibraryPayload | NotFound | updateNotFoundPayload | deleteNotFoundPayload | Subcategoria | SubcategoriaConnection | SubcategoriaAggregator | SubcategoriaGroupBy | SubcategoriaConnectionId | SubcategoriaConnectionCreated_at | SubcategoriaConnectionUpdated_at | SubcategoriaConnectionName | SubcategoriaConnectionSlug | SubcategoriaConnectionLocale | SubcategoriaConnectionPublished_at | createSubcategoriaPayload | updateSubcategoriaPayload | deleteSubcategoriaPayload | Tag | TagConnection | TagAggregator | TagGroupBy | TagConnectionId | TagConnectionCreated_at | TagConnectionUpdated_at | TagConnectionName | TagConnectionSlug | TagConnectionLocale | TagConnectionPublished_at | createTagPayload | updateTagPayload | deleteTagPayload | I18NLocale | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentButtonBtn | ComponentChecklistAccordion | ComponentHomePageCasesSection | ComponentHomePageCta | ComponentHomePageGuideCard | ComponentHomePageGuidesSection | ComponentHomePageHeroSection | ComponentHomePageLibrarySection | ComponentLibraryEmpty | ComponentLibraryLink
 
 input InputID {
   id: ID!
@@ -2475,6 +2524,7 @@ type AdminUser {
 }
 
 type Query {
+  about(publicationState: PublicationState, locale: String): About
   accessibleTo(id: ID!, publicationState: PublicationState): AccessibleTo
   accessibleTos(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState, locale: String): [AccessibleTo!]!
   accessibleTosConnection(sort: String, limit: Int, start: Int, where: JSON, locale: String): AccessibleToConnection
@@ -2524,6 +2574,8 @@ type Query {
 }
 
 type Mutation {
+  updateAbout(input: updateAboutInput, locale: String): updateAboutPayload
+  deleteAbout(locale: String): deleteAboutPayload
   createAccessibleTo(input: createAccessibleToInput): createAccessibleToPayload
   updateAccessibleTo(input: updateAccessibleToInput): updateAccessibleToPayload
   deleteAccessibleTo(input: deleteAccessibleToInput): deleteAccessibleToPayload
@@ -2580,6 +2632,7 @@ type Mutation {
   updateUser(input: updateUserInput): updateUserPayload
   """Delete an existing user"""
   deleteUser(input: deleteUserInput): deleteUserPayload
+  createAboutLocalization(input: updateAboutInput!): About!
   createAccessibleToLocalization(input: updateAccessibleToInput!): AccessibleTo!
   createAuthorLocalization(input: updateAuthorInput!): Author!
   createCaseLocalization(input: updateCaseInput!): Case!
