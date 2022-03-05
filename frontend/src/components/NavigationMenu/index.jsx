@@ -133,7 +133,7 @@ const StyledTriggerWithCaret = React.forwardRef(
 const StyledLink = styled(NavigationMenuPrimitive.Link)`
   ${({ theme }) => css`
     /* itemStyles */
-    padding: ${theme.spacings.xsmall}rem ${theme.spacings.medium}rem
+    padding: ${theme.spacings.xsmall}rem ${theme.spacings.large}rem
       ${theme.spacings.xsmall}rem ${theme.spacings.small}rem;
     outline: none;
     user-select: none;
@@ -170,9 +170,12 @@ const StyledLink = styled(NavigationMenuPrimitive.Link)`
 `;
 
 const StyledContent = styled(NavigationMenuPrimitive.Content)`
-  position: absolute;
-  top: 0;
-  left: 0;
+  ${({ theme }) => css`
+    padding: ${theme.spacings.medium}rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  `}
 
   @media only screen and (min-width: 600px) {
     width: auto;
@@ -283,15 +286,13 @@ const modifiers = {
   `,
 
   two: () => css`
-    width: 580px;
+    width: 700px;
   `,
 };
 
-
 const ContentList = styled.ul`
-  ${({ theme, layout }) => css`
+  ${({ layout }) => css`
     display: flex;
-    padding: ${theme.spacings.medium}rem;
     margin: 0;
     gap: 0.5rem;
     list-style: none;
@@ -358,14 +359,6 @@ const Divider = styled.div`
   ${({ theme }) => css`
     border-right: 1px solid ${theme.colors.border};
   `}
-`;
-
-const CheckDesign = styled.div`
-  width: 50%;
-`;
-
-const CheckDev = styled.div`
-  width: 50%;
 `;
 
 const colorModifier = {
@@ -705,45 +698,70 @@ const NavigationMenuComp = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Avaliar</NavigationMenuTrigger>
           <NavigationMenuContent>
+            <ContentListHeader>Checklists</ContentListHeader>
             <ContentList layout="two">
-              <CheckDev>
-                <ContentListItem title="Checklist de Design" href="/">
-                  <SVGWrapper type="design">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      style={{ marginLeft: '.5rem' }}
-                    >
-                      <path
-                        d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </SVGWrapper>
-                </ContentListItem>
-              </CheckDev>
-              <CheckDesign>
-                <ContentListItem title="Checklist de Desenvolvimento" href="/">
-                  <SVGWrapper type="dev">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      style={{ marginLeft: '.5rem' }}
-                    >
-                      <path
-                        d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </SVGWrapper>
-                </ContentListItem>
-              </CheckDesign>
+              <ContentListItem
+                title="Checklist Geral"
+                href="/checklists?category=Geral"
+              >
+                <SVGWrapper type="all">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ marginLeft: '.5rem' }}
+                  >
+                    <path
+                      d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </SVGWrapper>
+              </ContentListItem>
+
+              <ContentListItem
+                title="Checklist de Design"
+                href="/checklists?category=Design"
+              >
+                <SVGWrapper type="design">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ marginLeft: '1rem' }}
+                  >
+                    <path
+                      d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </SVGWrapper>
+              </ContentListItem>
+
+              <ContentListItem
+                title="Checklist de Desenvolvimento"
+                href="/checklists?category=Desenvolvimento"
+              >
+                <SVGWrapper type="dev">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ marginLeft: '1rem' }}
+                  >
+                    <path
+                      d="M7.65316 1.20563L8.54503 0.290588C8.92266 -0.0968628 9.53331 -0.0968628 9.90693 0.290588L17.7168 8.29929C18.0944 8.68674 18.0944 9.31326 17.7168 9.69659L9.90693 17.7094C9.52929 18.0969 8.91865 18.0969 8.54503 17.7094L7.65316 16.7944C7.27151 16.4028 7.27954 15.7639 7.66923 15.3806L12.5102 10.6487H0.964178C0.429863 10.6487 0 10.2077 0 9.65949V8.34051C0 7.79231 0.429863 7.35127 0.964178 7.35127H12.5102L7.66923 2.61942C7.27553 2.23609 7.26749 1.59721 7.65316 1.20563Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </SVGWrapper>
+              </ContentListItem>
             </ContentList>
           </NavigationMenuContent>
         </NavigationMenuItem>

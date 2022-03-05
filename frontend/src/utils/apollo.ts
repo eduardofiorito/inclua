@@ -22,6 +22,7 @@ function createApolloClient() {
             contentLibraries: concatPagination(),
             cases: concatPagination(),
             guides: concatPagination(),
+            checklists: concatPagination(),
           },
         },
       },

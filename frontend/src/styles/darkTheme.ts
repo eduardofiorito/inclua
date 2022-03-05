@@ -79,7 +79,7 @@ export default {
     },
     support: {
       yellow: '#EBB129',
-      red: '#DE515A',
+      red: '#f07f86',
       purple: '#646DC8',
     },
     title: 'rgba(235, 242, 253, .75)',
@@ -99,6 +99,9 @@ export default {
     overlay: 'rgba(255,255,255,0.05)',
     shapes: '#0A0A0A',
     tags: '#303030',
+    accordion: {
+      content: '#0A0A0A',
+    },
   },
   spacings: {
     none: 0,

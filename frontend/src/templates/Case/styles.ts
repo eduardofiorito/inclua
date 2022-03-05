@@ -558,7 +558,7 @@ export const Content = styled.main`
     code {
       font-family: ${theme.font.familyCode};
       background-color: #1e1e1e;
-      color: ${theme.colors.support.red};
+      color: #f07f86;
       padding: ${theme.spacings.xxsmall}rem;
       border-radius: 6px;
     }
