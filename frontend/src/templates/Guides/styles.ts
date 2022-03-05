@@ -17,16 +17,6 @@ export const Wrapper = styled.main`
       padding: ${theme.spacings.xxlarge}rem 0;
     `}
   `}
-
-  h1 {
-    ${customMedia.between('initial', 'large')`
-      text-align: center;
-    `}
-
-    ${customMedia.greaterThan('large')`
-      text-align: left;
-    `}
-  }
 `;
 
 export const Shape = styled.div`
@@ -52,7 +42,6 @@ export const Description = styled.h2`
     ${customMedia.between('initial', 'large')`
       width: 100%;
       margin-top: ${theme.spacings.xsmall}rem;
-      text-align: center;
       font-size: ${theme.font.sizes.h6}rem;
       line-height: 1.5rem;
     `}
@@ -61,7 +50,6 @@ export const Description = styled.h2`
       ${({ theme }) => css`
         width: 80%;
         margin-top: ${theme.spacings.small}rem;
-        text-align: left;
         font-size: ${theme.font.sizes.h5}rem;
         line-height: 2rem;
       `}
