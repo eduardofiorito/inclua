@@ -50,12 +50,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/images/favicon.ico" />
       </Head>
       <ApolloProvider client={client}>
-        <ThemeProvider theme={isDarkTheme ? darkTheme : theme}>
+        <ThemeProvider theme={themeState === 'dark' ? darkTheme : theme}>
           <Header
-            title="Toggle theme"
+            title="Mudar o tema"
             fnToggle={toggleTheme}
-            lightText="Light mode"
-            darkText="Dark mode"
+            lightText="Para modo claro"
+            darkText="Para modo escuro"
             isDarkTheme={isDarkTheme}
           />
 
