@@ -21,7 +21,7 @@ export const Wrapper = styled.main`
 
 export const Hero = styled.section``;
 
-export const Description = styled.h2`
+export const Description = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.subtitle};
     max-width: 768px;
