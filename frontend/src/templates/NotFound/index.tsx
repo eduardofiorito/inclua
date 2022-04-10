@@ -2,6 +2,7 @@ import Button from 'components/Button';
 import Footer from 'components/Footer';
 import Heading from 'components/Heading';
 import Menu from 'components/Menu';
+import Head from 'next/head';
 import * as S from './styles';
 
 export type NotFoundTemplateProps = {
@@ -19,6 +20,10 @@ export type NotFoundTemplateProps = {
 export default function NotFound({ title, btn, img }: NotFoundTemplateProps) {
   return (
     <>
+      <Head>
+        <title>404 | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper id="main">
         <S.Shape>

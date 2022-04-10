@@ -24,6 +24,7 @@ import {
 
 import * as S from './styles';
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 const linkCta = {
   url: '/sign-up',
@@ -95,6 +96,11 @@ const CaseTemplate = ({
 
   return (
     <>
+      <Head>
+        <title>{title} | Inclua</title>
+        <meta name="description" content={excerpt} />
+      </Head>
+
       <Menu authenticated={false} />
 
       <S.Wrapper>

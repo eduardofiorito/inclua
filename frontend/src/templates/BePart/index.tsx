@@ -3,6 +3,7 @@ import Cta from 'components/Cta';
 import Footer from 'components/Footer';
 import Heading from 'components/Heading';
 import Menu from 'components/Menu';
+import Head from 'next/head';
 import * as S from '../BePart/styles';
 
 type ImgProps = {
@@ -70,6 +71,10 @@ export default function BePart({
 }: BePartTemplateProps) {
   return (
     <>
+      <Head>
+        <title>Faça Parte | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <S.Shape>

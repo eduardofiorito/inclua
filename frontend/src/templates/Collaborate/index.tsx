@@ -10,6 +10,7 @@ import TextField from 'components/TextField';
 import Button from 'components/Button';
 
 import { Email, Message } from '@styled-icons/material-outlined';
+import Head from 'next/head';
 
 const StyledTabs = styled(TabsPrimitive.Root)`
   display: flex;
@@ -202,6 +203,9 @@ const Box = styled.section`
 
 const Collaborate = () => (
   <>
+    <Head>
+      <title>Colaborar | Inclua</title>
+    </Head>
     <Menu authenticated={false} />
     <Wrapper>
       <Container>

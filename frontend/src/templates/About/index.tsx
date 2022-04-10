@@ -3,6 +3,7 @@ import Cta from 'components/Cta';
 import Footer from 'components/Footer';
 import Heading from 'components/Heading';
 import Menu from 'components/Menu';
+import Head from 'next/head';
 import * as S from '../About/styles';
 
 export type AboutTemplateProps = {
@@ -26,6 +27,10 @@ export default function About({
 }: AboutTemplateProps) {
   return (
     <>
+      <Head>
+        <title>Sobre | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <S.Shape>

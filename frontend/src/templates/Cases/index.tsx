@@ -24,6 +24,7 @@ import {
   QueryCases_cases,
 } from 'graphql/generated/QueryCases';
 import { QUERY_CASES } from 'graphql/queries/cases';
+import Head from 'next/head';
 
 type CasesItems = {
   title: string;
@@ -82,6 +83,10 @@ const LibraryTemplate = ({ filterItems, casesSingle }: CasesTemplateProps) => {
 
   return (
     <>
+      <Head>
+        <title>Estudos de Caso | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <Container>

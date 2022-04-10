@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Inclua- Construindo um mundo digital acessível</title>
+        <title>Construindo um mundo digital acessível | Inclua</title>
         <Meta />
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Roboto:wght@400;500&family=Source+Code+Pro:wght@300;400&display=swap"

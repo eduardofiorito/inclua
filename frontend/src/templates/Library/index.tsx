@@ -23,6 +23,7 @@ import {
   parseQueryStringToWhere,
 } from 'utils/filter';
 import { ParsedUrlQueryInput } from 'querystring';
+import Head from 'next/head';
 
 type LibraryItems = {
   title: string;
@@ -81,6 +82,10 @@ const LibraryTemplate = ({ filterItems, library }: LibraryTemplateProps) => {
 
   return (
     <>
+      <Head>
+        <title>Biblioteca de Links | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <Container>

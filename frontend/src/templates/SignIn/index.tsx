@@ -1,11 +1,16 @@
 import { Container } from 'components/Container';
 import FormSignIn from 'components/FormSignIn';
 import Menu from 'components/Menu';
+import Head from 'next/head';
 import * as S from './styles';
 
 export default function SignInTemplate() {
   return (
     <>
+      <Head>
+        <title>Entrar | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <S.Shape>

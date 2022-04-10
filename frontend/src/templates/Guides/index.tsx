@@ -24,6 +24,7 @@ import {
 } from 'graphql/generated/QueryGuides';
 import { QUERY_GUIDES } from 'graphql/queries/guides';
 import GuideCard from 'components/GuideCard';
+import Head from 'next/head';
 
 type GuidesItems = {
   title: string;
@@ -82,6 +83,10 @@ const GuidesTemplate = ({ filterItems, guidesSingle }: GuidesTemplateProps) => {
 
   return (
     <>
+      <Head>
+        <title>Guias | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <Container>

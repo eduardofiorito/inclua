@@ -23,6 +23,7 @@ import {
 } from 'graphql/generated/QueryChecklists';
 import { QUERY_CHECKLISTS } from 'graphql/queries/checklists';
 import Checklist from 'components/Checklist';
+import Head from 'next/head';
 
 type ChecklistsItems = {
   title: string;
@@ -84,6 +85,10 @@ const ChecklistTemplate = ({
 
   return (
     <>
+      <Head>
+        <title>Checklists | Inclua</title>
+      </Head>
+
       <Menu authenticated={false} />
       <S.Wrapper>
         <Container>
