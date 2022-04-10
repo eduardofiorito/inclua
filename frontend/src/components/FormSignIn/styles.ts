@@ -25,4 +25,5 @@ export const ForgotPassword = styled.div`
 
 export const ButtonWrapper = styled.div`
   margin: 2rem 0;
+  width: 100%;
 `;

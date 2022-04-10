@@ -91,7 +91,7 @@ export default function BePart({
         </S.Shape>
         <S.Hero>
           <Container>
-            <S.Content>
+            <S.Content id="main">
               <Heading size="h2" fontColor="title">
                 {hero.title}
               </Heading>

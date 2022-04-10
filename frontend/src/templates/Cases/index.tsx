@@ -99,7 +99,7 @@ const LibraryTemplate = ({ filterItems, casesSingle }: CasesTemplateProps) => {
                 filterItems,
               })}
             />
-            <S.Cases>
+            <S.Cases id="main">
               {data.cases.length ? (
                 <>
                   <Grid>

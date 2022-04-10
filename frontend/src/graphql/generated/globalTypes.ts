@@ -18,6 +18,9 @@ export enum ENUM_CONTENTLIBRARY_LANGUAGE {
   portugues = "portugues",
 }
 
-//==============================================================
-// END Enums and Input Objects
-//==============================================================
+
+export interface UsersPermissionsRegisterInput {
+  username: string;
+  email: string;
+  password: string;
+}

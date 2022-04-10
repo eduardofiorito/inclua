@@ -84,7 +84,7 @@ const Sidebar = ({
         </S.CloseWrapper>
       </S.Header>
 
-      <S.Content>
+      <S.Content id="filter">
         {items.map((item) => (
           <S.Items key={item.title}>
             <Heading level={3} size="body1">

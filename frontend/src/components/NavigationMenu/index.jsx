@@ -767,7 +767,7 @@ const NavigationMenuComp = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink href="/about">Colaborar</NavigationMenuLink>
+          <NavigationMenuLink href="/collaborate">Colaborar</NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>

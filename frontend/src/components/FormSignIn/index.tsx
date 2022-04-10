@@ -1,9 +1,4 @@
 import { useState } from 'react';
-
-/* import { signIn } from 'next-auth/client'; */
-
-import { useRouter } from 'next/router';
-
 import { Email, Lock, ErrorOutline } from '@styled-icons/material-outlined';
 import { FormLink, FormWrapper, FormLoading, FormError } from 'components/Form';
 import Button from 'components/Button';
@@ -18,9 +13,6 @@ const FormSignIn = () => {
   const [fieldError, setFieldError] = useState<FieldErrors>({});
   const [values, setValues] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
-  const routes = useRouter();
-
-  const { push, query } = routes;
 
   const handleInput = (field: string, value: string) => {
     setValues((s) => ({ ...s, [field]: value }));
@@ -39,23 +31,10 @@ const FormSignIn = () => {
 
     setFieldError({});
 
-    // sign in
-
-    /* const result = await signIn('credentials', {
-      ...values,
-
-      redirect: false,
-      callbackUrl: `${window.location.origin}${query?.callbackUrl || ''}`,
-    });
-
-    if (result?.url) {
-      return push(result?.url);
-    } */
-
     setLoading(false);
 
     // jogar o erro
-    setFormError('Usuário ou senha inválido');
+    setFormError('Autenticado com sucesso!');
   };
 
   return (
@@ -70,7 +49,7 @@ const FormSignIn = () => {
         Entrar
       </Heading>
 
-      <S.Form onSubmit={handleSubmit}>
+      <S.Form onSubmit={handleSubmit} autoComplete="on" id="main">
         <TextField
           label="E-mail"
           name="email"

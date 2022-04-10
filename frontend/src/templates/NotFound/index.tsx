@@ -20,7 +20,7 @@ export default function NotFound({ title, btn, img }: NotFoundTemplateProps) {
   return (
     <>
       <Menu authenticated={false} />
-      <S.Wrapper>
+      <S.Wrapper id="main">
         <S.Shape>
           <svg
             width="696"

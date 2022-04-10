@@ -15,6 +15,7 @@ export async function getStaticProps() {
   const { title, subtitle, content, cta } = data.about;
 
   return {
+    revalidate: 60 * 60 * 24,
     props: {
       title: title,
       subtitle: subtitle,

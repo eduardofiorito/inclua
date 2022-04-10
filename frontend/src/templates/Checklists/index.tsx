@@ -101,7 +101,7 @@ const ChecklistTemplate = ({
                 filterItems,
               })}
             />
-            <S.Checklists>
+            <S.Checklists id="main">
               {data.checklists.length ? (
                 <>
                   <>

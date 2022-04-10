@@ -21,7 +21,7 @@ const Menu = ({ authenticated = false }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <S.Menu>
+    <S.Menu id="menu">
       <Container className="container">
         <LogoLink url="/" alternativeText="Inclua Home" width="normal" />
 
@@ -76,12 +76,10 @@ const Menu = ({ authenticated = false }: MenuProps) => {
                 </Dropdown>
               </S.ListItemMobile>
               <S.ListItemMobile>
-                <Dropdown title={'Colaborar'}>
-                  <DropdownLearn />
-                </Dropdown>
+                <S.LinkMobile href="/collaborate">Colaborar</S.LinkMobile>
               </S.ListItemMobile>
               <S.ListItemMobile>
-                <S.LinkMobile href="#">Sobre o Inclua</S.LinkMobile>
+                <S.LinkMobile href="/about">Sobre o Inclua</S.LinkMobile>
               </S.ListItemMobile>
               {!!authenticated && (
                 <S.ListItemMobile>

@@ -5,8 +5,10 @@ export default {
   title: 'CaseCard',
   component: CaseCard,
   args: {
-    linkUrl: '/cases',
-    alternativeText: 'Alguma coisa',
+    img: {
+      url: 'https://res.cloudinary.com/dtz06cfki/image/upload/v1646070598/dog2_d282142de6.png',
+      alternativeText: 'Alguma coisa',
+    },
     type: 'Cases de Design',
     title:
       'Fisio52: Como a correção da navegação por teclado trouxe mais clientes para a clínica',

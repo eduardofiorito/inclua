@@ -94,6 +94,7 @@ const wrapperModifiers = {
     }
   `,
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   disabled: (theme: DefaultTheme) => css`
     ${Label},
     ${Input},

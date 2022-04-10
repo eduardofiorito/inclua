@@ -98,7 +98,7 @@ const LibraryTemplate = ({ filterItems, library }: LibraryTemplateProps) => {
                 filterItems,
               })}
             />
-            <S.Library>
+            <S.Library id="main">
               {data.contentLibraries.length ? (
                 <>
                   <Grid>

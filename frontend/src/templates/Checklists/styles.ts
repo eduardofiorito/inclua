@@ -17,16 +17,6 @@ export const Wrapper = styled.main`
       padding: ${theme.spacings.xxlarge}rem 0;
     `}
   `}
-
-  h1 {
-    ${customMedia.between('initial', 'large')`
-      text-align: center;
-    `}
-
-    ${customMedia.greaterThan('large')`
-      text-align: left;
-    `}
-  }
 `;
 
 export const Shape = styled.div`

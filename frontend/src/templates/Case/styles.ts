@@ -188,6 +188,18 @@ export const Role = styled.p`
 export const Share = styled.div`
   display: flex;
   gap: 0.5rem;
+
+  button {
+    ${({ theme }) => css`
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      &:focus {
+        outline: 1px solid ${theme.colors.title} !important;
+      }
+    `}
+  }
 `;
 
 export const Audio = styled.audio`

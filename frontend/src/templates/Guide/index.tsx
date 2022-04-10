@@ -110,7 +110,7 @@ const GuideTemplate = ({
           </svg>
         </S.Shape>
         <Container>
-          <S.Article>
+          <S.Article id="main">
             <S.Header>
               {subcategory && <S.Top>{subcategory.name}</S.Top>}
               <Heading

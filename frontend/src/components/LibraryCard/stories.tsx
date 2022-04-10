@@ -8,7 +8,7 @@ export default {
     type: 'Livro',
     title: 'Cartilha de acessibilidade: Fáscisculo I - WCAG',
     img: {
-      url: 'images/w3c.png',
+      url: 'https://res.cloudinary.com/dtz06cfki/image/upload/v1645098956/w3c_cdb2f81286.png',
       alternativeText: 'W3c',
     },
     link: {

@@ -1,5 +1,4 @@
 import { Container } from 'components/Container';
-import Heading from 'components/Heading';
 import LogoLink from 'components/LogoLink';
 import * as S from './styles';
 
@@ -7,19 +6,18 @@ import { Facebook as FacebookIcon } from '@styled-icons/bootstrap/Facebook';
 import { Instagram as InstagramIcon } from '@styled-icons/bootstrap/Instagram';
 import { Linkedin as LinkedinIcon } from '@styled-icons/bootstrap/Linkedin';
 import { Youtube as YoutubeIcon } from '@styled-icons/bootstrap/Youtube';
+import Heading from 'components/Heading';
 
 const Footer = () => {
   return (
-    <S.Footer>
+    <S.Footer id="footer">
       <Container>
         <S.Content>
           <S.Column>
             <Heading
               fontColor="title"
-              level={4}
-              size="h6"
-              weight="semiBold"
-              lineHeight={1.2}
+              level={2}
+              size="body1"
               marginBottom="xsmall"
             >
               Aprender
@@ -35,39 +33,32 @@ const Footer = () => {
           <S.Column>
             <Heading
               fontColor="title"
-              level={4}
-              size="h6"
-              weight="semiBold"
-              lineHeight={1.2}
+              level={2}
+              size="body1"
               marginBottom="xsmall"
             >
               Avaliar
             </Heading>
+            <S.Link href="/">Checklist de Geral</S.Link>
             <S.Link href="/">Checklist de Design</S.Link>
             <S.Link href="/">Checklist de Desenvolvimento</S.Link>
           </S.Column>
           <S.Column>
             <Heading
               fontColor="title"
-              level={4}
-              size="h6"
-              weight="semiBold"
-              lineHeight={1.2}
+              level={2}
+              size="body1"
               marginBottom="xsmall"
             >
               Colaborar
             </Heading>
-            <S.Link href="/">Fóruns</S.Link>
-            <S.Link href="/">Dúvidas e Sugestões</S.Link>
-            <S.Link href="/">Estudos de Caso</S.Link>
+            <S.Link href="/">Colabore conosco</S.Link>
           </S.Column>
           <S.Column>
             <Heading
               fontColor="title"
-              level={4}
-              size="h6"
-              weight="semiBold"
-              lineHeight={1.2}
+              level={2}
+              size="body1"
               marginBottom="xsmall"
             >
               Sobre
@@ -77,7 +68,14 @@ const Footer = () => {
         </S.Content>
         <S.Utilities>
           <S.Languages>
-            <p>Idioma:</p>
+            <Heading
+              fontColor="title"
+              level={2}
+              size="body1"
+              marginBottom="xsmall"
+            >
+              Idioma:
+            </Heading>
             <S.Portuguese title="pt-br">
               <svg
                 width="36"

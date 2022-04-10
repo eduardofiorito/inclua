@@ -43,10 +43,7 @@ export type GuidesTemplateProps = {
   guidesSingle: GuidesItems;
 };
 
-const LibraryTemplate = ({
-  filterItems,
-  guidesSingle,
-}: GuidesTemplateProps) => {
+const GuidesTemplate = ({ filterItems, guidesSingle }: GuidesTemplateProps) => {
   const { push, query } = useRouter();
 
   const { data, loading, fetchMore } = useQuery<
@@ -102,7 +99,7 @@ const LibraryTemplate = ({
                 filterItems,
               })}
             />
-            <S.Guides>
+            <S.Guides id="main">
               {data.guides.length ? (
                 <>
                   <Grid>
@@ -249,4 +246,4 @@ const LibraryTemplate = ({
     </>
   );
 };
-export default LibraryTemplate;
+export default GuidesTemplate;

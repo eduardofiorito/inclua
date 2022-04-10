@@ -35,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+  html {scroll-behavior: smooth;}
   body {
     line-height: 1;
     font-family: ${({ theme }) => theme.font.family};
@@ -56,6 +57,16 @@ export const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+@media (prefers-color-scheme: dark) {
+  background:  #121212;
+  color: white; 
+}
+
+@media (prefers-color-scheme: light) {
+  background: #FDFDFD;
+  color:  black; 
+}
 `;
 
 export default GlobalStyle;

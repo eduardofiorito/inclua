@@ -46,7 +46,7 @@ export default function About({
           </svg>
         </S.Shape>
         <Container>
-          <S.Hero>
+          <S.Hero id="main">
             <Heading size="h2" fontColor="title">
               {title}
             </Heading>

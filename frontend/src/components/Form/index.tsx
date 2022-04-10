@@ -31,8 +31,12 @@ export const FormLoading = styled.img.attrs(() => ({
 export const FormError = styled.div`
   ${({ theme }) => css`
     text-align: center;
-    color: ${theme.colors.support.red};
+    color: #155724;
+    background-color: #d4edda;
+    padding: 0.5rem;
+    border-radius: 6px;
     font-size: ${theme.font.sizes.overline};
+    margin-bottom: 0.5rem;
 
     svg {
       width: 1.6rem;

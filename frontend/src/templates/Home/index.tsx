@@ -96,7 +96,7 @@ const Home = ({ hero, guides, cases, library, cta }: HomeProps) => {
     <>
       <Menu authenticated={false} />
 
-      <S.Hero>
+      <S.Hero id="main">
         <Container className="container">
           <S.Content>
             <Heading
