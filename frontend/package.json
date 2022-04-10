@@ -15,6 +15,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@babel/core": "^7.16.12",
+    "@djpfs/react-vlibras": "^2.0.0",
     "@radix-ui/react-accordion": "^0.1.6",
     "@radix-ui/react-icons": "^1.1.0",
     "@radix-ui/react-navigation-menu": "^0.1.2",

@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from 'utils/apollo';
 
+import VLibras from '@djpfs/react-vlibras';
+
 export default function App({ Component, pageProps }: AppProps) {
   const [themeState, setThemeState] = useState('light');
   const isDarkTheme = themeState === 'dark';
@@ -36,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Inclua</title>
+        <title>Inclua- Construindo um mundo digital acessível</title>
         <Meta />
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Roboto:wght@400;500&family=Source+Code+Pro:wght@300;400&display=swap"
@@ -60,6 +62,8 @@ export default function App({ Component, pageProps }: AppProps) {
           />
 
           <Component {...pageProps} />
+
+          <VLibras />
           <GlobalStyle />
         </ThemeProvider>
       </ApolloProvider>
