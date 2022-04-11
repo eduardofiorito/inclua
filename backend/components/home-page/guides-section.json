@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_page_guides_sections",
+  "info": {
+    "name": "guidesSection",
+    "icon": "arrow-alt-circle-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 70,
+      "minLength": 10
+    },
+    "guideCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.guide-card",
+      "max": 3,
+      "required": true
+    }
+  }
+}

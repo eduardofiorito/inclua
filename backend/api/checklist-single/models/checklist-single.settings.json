@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "checklist_singles",
+  "info": {
+    "name": "ChecklistSingle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "btnShowMore": {
+      "type": "string",
+      "required": true
+    },
+    "empty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "library.empty",
+      "required": true
+    }
+  }
+}

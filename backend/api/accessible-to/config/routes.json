@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/accessible-tos",
+      "handler": "accessible-to.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accessible-tos/count",
+      "handler": "accessible-to.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accessible-tos/:id",
+      "handler": "accessible-to.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/accessible-tos",
+      "handler": "accessible-to.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/accessible-tos/:id",
+      "handler": "accessible-to.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/accessible-tos/:id",
+      "handler": "accessible-to.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

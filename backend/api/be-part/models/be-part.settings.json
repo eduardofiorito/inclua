@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "be_parts",
+  "info": {
+    "name": "BePart",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "be-part.hero",
+      "required": true
+    },
+    "learnSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "be-part.learn",
+      "required": true
+    },
+    "checklistSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "be-part.hero",
+      "required": true
+    },
+    "networkingSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "be-part.networking",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.cta",
+      "required": true
+    },
+    "casesAlt": {
+      "type": "component",
+      "repeatable": false,
+      "component": "be-part.hero",
+      "required": true
+    }
+  }
+}

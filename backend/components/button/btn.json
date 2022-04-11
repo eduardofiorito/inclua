@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_button_btns",
+  "info": {
+    "name": "btn",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

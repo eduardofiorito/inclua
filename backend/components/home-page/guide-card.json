@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_home_page_guide_cards",
+  "info": {
+    "name": "guideCard",
+    "icon": "at"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "linkUrl": {
+      "type": "string",
+      "required": true
+    },
+    "linkText": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "design",
+        "dev"
+      ],
+      "required": true
+    }
+  }
+}

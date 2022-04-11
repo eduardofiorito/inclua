@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_libraries",
+  "info": {
+    "name": "ContentLibrary",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "maxLength": 55,
+      "required": true
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "library.link"
+    },
+    "language": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "portugues",
+        "ingles"
+      ],
+      "required": true
+    },
+    "content_type": {
+      "model": "content-type",
+      "via": "content_libraries"
+    },
+    "categories": {
+      "via": "content_libraries",
+      "collection": "category",
+      "dominant": true
+    },
+    "guides": {
+      "via": "content_libraries",
+      "collection": "guides"
+    },
+    "cases": {
+      "via": "content_libraries",
+      "collection": "case"
+    }
+  }
+}
