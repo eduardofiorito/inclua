@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/be-part",
+      "handler": "be-part.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/be-part",
+      "handler": "be-part.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/be-part",
+      "handler": "be-part.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "cases": {
+      "via": "category",
+      "collection": "case"
+    },
+    "content_libraries": {
+      "via": "categories",
+      "collection": "content-library"
+    },
+    "guides": {
+      "via": "category",
+      "collection": "guides"
+    },
+    "checklists": {
+      "via": "category",
+      "collection": "checklist"
+    }
+  }
+}

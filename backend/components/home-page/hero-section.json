@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_home_page_hero_sections",
+  "info": {
+    "name": "heroSection",
+    "icon": "angle-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 65,
+      "minLength": 30
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true,
+      "maxLength": 120,
+      "minLength": 40
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.btn",
+      "required": true
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

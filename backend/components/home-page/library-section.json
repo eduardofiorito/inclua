@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_page_library_sections",
+  "info": {
+    "name": "librarySection",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.btn",
+      "required": true
+    },
+    "content_libraries": {
+      "collection": "content-library"
+    }
+  }
+}

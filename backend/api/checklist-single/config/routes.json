@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/checklist-single",
+      "handler": "checklist-single.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/checklist-single",
+      "handler": "checklist-single.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/checklist-single",
+      "handler": "checklist-single.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

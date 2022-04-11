@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/guides-single",
+      "handler": "guides-single.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/guides-single",
+      "handler": "guides-single.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/guides-single",
+      "handler": "guides-single.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

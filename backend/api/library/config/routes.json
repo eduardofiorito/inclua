@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/library",
+      "handler": "library.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/library",
+      "handler": "library.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/library",
+      "handler": "library.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

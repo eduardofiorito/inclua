@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_page_ctas",
+  "info": {
+    "name": "cta",
+    "icon": "award",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.btn"
+    }
+  }
+}
