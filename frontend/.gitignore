@@ -35,8 +35,3 @@ yarn-error.log*
 
 # Vs Code
 .vscode
-
-# Customs
-src/components/Main
-src/components/Main
-public/images
